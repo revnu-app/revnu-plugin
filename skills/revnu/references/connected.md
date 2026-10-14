@@ -54,7 +54,7 @@ Carry out only the person's explicit decision:
 
 | Decision | Tool |
 |---|---|
-| Send a prepared email or reply | `review_send` (pass `body` only if they asked for an edit). Sends real email. |
+| Send a prepared email or reply | `review_send` (include `body` only if they asked for an edit). Sends real email. |
 | Approve something else | `review_answer` with `action: "approve"`, if the card's `actions` allow it. Can publish or change spend. |
 | Answer a question | `review_answer` with `action: "answer"` and their words in `text`. |
 | Pick an option | `review_answer` with `action: "choose"` and the one option they chose. |
