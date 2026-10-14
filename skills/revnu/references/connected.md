@@ -68,9 +68,10 @@ stopped working.
 
 ## Results
 
-Call `results_get`. `since` is epoch milliseconds, clamped to the last seven
-days, default 24 hours. For a longer period, say so and ask Revnu for a report
-through `ask_revnu` instead of presenting seven days as a month.
+Call `results_get`. `since` is epoch milliseconds, clamped to the last 31
+days, default 24 hours. Read the returned `window` and name the period you
+report. For anything longer, say so and ask Revnu for a report through
+`ask_revnu` instead of presenting a month as a quarter.
 
 Each channel is either `{available: true, data}` or `{available: false,
 reason}`. Unavailable is unknown; a measured zero is zero. Keep activity,

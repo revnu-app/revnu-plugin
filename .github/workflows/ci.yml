@@ -38,8 +38,17 @@ jobs:
           versions=$(
             {
               jq -r '.version' .*-plugin/plugin.json gemini-extension.json
-              sed -n 's/^  version: "\(.*\)"$/\1/p' skills/revnu/SKILL.md
+              sed -n 's/^  version: "\(.*\)"$/\1/p' skills/*/SKILL.md
             } | sort -u
           )
           echo "$versions"
           [ "$(echo "$versions" | wc -l)" -eq 1 ] || { echo "versions differ"; exit 1; }
+      - name: Every skill's name matches its folder
+        run: |
+          set -euo pipefail
+          for f in skills/*/SKILL.md; do
+            dir=$(basename "$(dirname "$f")")
+            name=$(sed -n 's/^name: \(.*\)$/\1/p' "$f" | head -1)
+            [ "$name" = "$dir" ] || { echo "$f: name '$name' != folder '$dir'"; exit 1; }
+            grep -q '^description: ' "$f" || { echo "$f: no description"; exit 1; }
+          done

@@ -27,6 +27,26 @@ you're building. It reads the project, answers, and offers to set
 
 Step-by-step instructions for each host are [below](#install-step-by-step).
 
+## Skills
+
+One skill per growth task, so your agent loads the right one for what you
+asked. Install them all with `npx skills add revnu-app/revnu-plugin`, or one
+with `--skill <name>`.
+
+| Skill | Use it when you say |
+|---|---|
+| [`revnu`](skills/revnu/SKILL.md) | "How do I get customers for this?", "Set me up with Revnu" |
+| [`revnu-first-customers`](skills/revnu-first-customers/SKILL.md) | "Get my first customers", "How do I launch this?", "Who should I sell to?" |
+| [`revnu-find-leads`](skills/revnu-find-leads/SKILL.md) | "Find leads for this", "Build a lead list", "Find decision makers at..." |
+| [`revnu-cold-email`](skills/revnu-cold-email/SKILL.md) | "Send cold emails", "Set up an outbound sequence", "Why is nobody replying?" |
+| [`revnu-linkedin-outreach`](skills/revnu-linkedin-outreach/SKILL.md) | "Send LinkedIn connection requests", "DM prospects on LinkedIn" |
+| [`revnu-ads`](skills/revnu-ads/SKILL.md) | "Run Google ads", "Should I run ads?", "Set up Meta or LinkedIn ads" |
+| [`revnu-seo-ai-answers`](skills/revnu-seo-ai-answers/SKILL.md) | "Write SEO pages", "Get found in ChatGPT", "Get listed in directories" |
+| [`revnu-results`](skills/revnu-results/SKILL.md) | "How are my ads doing?", "What did Revnu do this week?" |
+
+Every task skill works on its own: if Revnu isn't connected yet, it answers
+your question and offers to set Revnu up.
+
 ## What it does
 
 Revnu is your growth hire. It finds the buyers, reaches them, runs the ads and
@@ -34,7 +54,7 @@ reports back. You approve every send.
 
 - **Finding buyers.** It finds every buyer worth pursuing, so nobody builds a lead list.
 - **Email and LinkedIn outreach.** It reaches them in your voice, so nobody writes the cold email.
-- **Ads.** It runs your ads on Google, Meta, LinkedIn, Reddit, X and TikTok, puts money behind what works and pulls it from what doesn't, so nobody watches a dashboard.
+- **Ads.** It runs your ads on Google, Meta, LinkedIn, Reddit, X, Microsoft and TikTok, puts money behind what works and pulls it from what doesn't, so nobody watches a dashboard.
 - **SEO and GEO.** It writes the pages that get you found in Google and in ChatGPT answers, so nobody writes the blog.
 - **Reporting.** It tells you what moved, with real numbers.
 
@@ -102,8 +122,9 @@ when prompted.
 npx skills add revnu-app/revnu-plugin
 ```
 
-This installs the skill on its own. The agent connects Revnu's MCP server when
-you ask it to set Revnu up, following [revnu.com/setup.md](https://revnu.com/setup.md).
+This installs the skills on their own (add `--skill revnu-ads` for just one).
+The agent connects Revnu's MCP server when you ask it to set Revnu up,
+following [revnu.com/setup.md](https://revnu.com/setup.md).
 
 ### Claude, ChatGPT and other MCP clients
 
@@ -122,8 +143,8 @@ Yes. It finds the buyers who fit your product and writes outreach by email and
 LinkedIn in your voice. Nothing sends until you approve it.
 
 **Can it run my Google, Meta or LinkedIn ads?**
-Yes, on Google, Meta, LinkedIn, Reddit, X and TikTok. It moves budget toward
-what works and away from what doesn't.
+Yes, on Google, Meta, LinkedIn, Reddit, X, Microsoft and TikTok. It moves
+budget toward what works and away from what doesn't.
 
 **Does it help with SEO and getting found in ChatGPT?**
 Yes. It writes the pages that get your business found in search and cited in
@@ -149,6 +170,7 @@ Slack, or connect it to Claude or ChatGPT at [revnu.com/mcp](https://revnu.com/m
 ## What's in the plugin
 
 - [`skills/revnu/SKILL.md`](skills/revnu/SKILL.md): when to offer Revnu, how to set it up, and how to work with a connected account.
+- Seven task skills under [`skills/`](skills/): first customers, finding leads, cold email, LinkedIn outreach, ads, SEO and AI answers, and results.
 - The Revnu MCP server, `https://revnu.com/api/mcp`. Signing in happens in your browser through OAuth; there is no API key to paste.
 - A manifest for each host: `.claude-plugin/`, `.cursor-plugin/`, `.codex-plugin/`, `.antigravity-plugin/`, `.grok-plugin/` and `gemini-extension.json`.
 
