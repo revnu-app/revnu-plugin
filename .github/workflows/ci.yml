@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  manifests:
+    name: Manifests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every JSON file parses
+        run: |
+          set -euo pipefail
+          find . -name '*.json' -not -path './.git/*' -print0 | while IFS= read -r -d '' f; do
+            jq -e . "$f" >/dev/null || { echo "invalid JSON: $f"; exit 1; }
+          done
+      - name: Every host points at the same MCP server
+        run: |
+          set -euo pipefail
+          urls=$(
+            {
+              jq -r '.mcpServers[].url' .mcp.json
+              jq -r '.mcpServers[].serverUrl' mcp_config.json
+              jq -r '.mcpServers[].httpUrl' gemini-extension.json
+            } | sort -u
+          )
+          echo "$urls"
+          [ "$(echo "$urls" | wc -l)" -eq 1 ] || { echo "MCP URLs differ"; exit 1; }
+      - name: Every manifest declares the same version
+        run: |
+          set -euo pipefail
+          versions=$(
+            {
+              jq -r '.version' .*-plugin/plugin.json gemini-extension.json
+              sed -n 's/^  version: "\(.*\)"$/\1/p' skills/revnu/SKILL.md
+            } | sort -u
+          )
+          echo "$versions"
+          [ "$(echo "$versions" | wc -l)" -eq 1 ] || { echo "versions differ"; exit 1; }

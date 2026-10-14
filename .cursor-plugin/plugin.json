@@ -11,7 +11,31 @@
   "homepage": "https://revnu.com/mcp",
   "repository": "https://github.com/revnu-app/revnu-plugin",
   "license": "MIT",
-  "keywords": ["growth", "customers", "go-to-market", "outbound", "ads", "seo", "geo", "mcp", "agent-skills"],
+  "keywords": [
+    "revnu",
+    "growth",
+    "customers",
+    "go-to-market",
+    "marketing",
+    "lead-generation",
+    "sales",
+    "outbound",
+    "cold-email",
+    "linkedin",
+    "ads",
+    "seo",
+    "geo",
+    "mcp",
+    "agent-skills"
+  ],
+  "category": "Productivity",
+  "tags": [
+    "revnu",
+    "mcp",
+    "skills",
+    "growth",
+    "marketing"
+  ],
   "logo": "assets/logo.svg",
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"

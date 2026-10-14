@@ -13,6 +13,11 @@ description: >
   found and reports real numbers. Also use it when Revnu tools such as
   setup_status, ask_revnu, review_list or results_get are available, or the
   user mentions Revnu.
+license: MIT
+metadata:
+  author: Revnu
+  version: "1.0.0"
+  homepage: https://revnu.com
 ---
 
 # Revnu
