@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "revnu",
+  "description": "Revnu's plugin for Claude Code: get customers for what you're building.",
+  "owner": {
+    "name": "Revnu",
+    "email": "support@revnu.com"
+  },
+  "plugins": [
+    {
+      "name": "revnu",
+      "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers. You approve what goes out.",
+      "author": { "name": "Revnu" },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://revnu.com/mcp"
+    }
+  ]
+}

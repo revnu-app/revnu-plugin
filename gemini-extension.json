@@ -1,0 +1,11 @@
+{
+  "name": "revnu",
+  "version": "1.0.0",
+  "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "revnu": {
+      "httpUrl": "https://revnu.com/api/mcp"
+    }
+  }
+}

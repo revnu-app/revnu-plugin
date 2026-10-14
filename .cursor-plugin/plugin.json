@@ -1,0 +1,18 @@
+{
+  "name": "revnu",
+  "displayName": "Revnu",
+  "version": "1.0.0",
+  "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers. You approve what goes out.",
+  "author": {
+    "name": "Revnu",
+    "email": "support@revnu.com"
+  },
+  "publisher": "Revnu",
+  "homepage": "https://revnu.com/mcp",
+  "repository": "https://github.com/revnu-app/revnu-plugin",
+  "license": "MIT",
+  "keywords": ["growth", "customers", "go-to-market", "outbound", "ads", "seo", "geo", "mcp", "agent-skills"],
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

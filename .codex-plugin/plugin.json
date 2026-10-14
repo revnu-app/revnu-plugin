@@ -1,0 +1,36 @@
+{
+  "name": "revnu",
+  "version": "1.0.0",
+  "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers.",
+  "author": {
+    "name": "Revnu",
+    "email": "support@revnu.com",
+    "url": "https://revnu.com"
+  },
+  "homepage": "https://revnu.com/mcp",
+  "repository": "https://github.com/revnu-app/revnu-plugin",
+  "license": "MIT",
+  "keywords": ["growth", "customers", "go-to-market", "outbound", "ads", "seo", "geo", "mcp", "agent-skills"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Revnu",
+    "shortDescription": "Get customers for what you're building.",
+    "longDescription": "GTM on autopilot. Revnu runs your pipeline, ads and GEO: it finds your buyers, reaches them in your voice, runs your ads and gets you found in ChatGPT answers, then reports what moved. You approve every send. Ask a growth question about the project you're working on and Codex can set Revnu up for it, hand it jobs, show what's waiting for your approval and read the results.",
+    "developerName": "Revnu",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://revnu.com",
+    "privacyPolicyURL": "https://revnu.com/privacy",
+    "termsOfServiceURL": "https://revnu.com/terms",
+    "defaultPrompt": [
+      "How do I get my first 100 customers for this?",
+      "Set me up with Revnu for this project.",
+      "What's waiting for my approval in Revnu?"
+    ],
+    "brandColor": "#F6F4F0",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg",
+    "screenshots": []
+  }
+}

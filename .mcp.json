@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "revnu": {
+      "type": "http",
+      "url": "https://revnu.com/api/mcp"
+    }
+  }
+}
