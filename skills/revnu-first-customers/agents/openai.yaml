@@ -1,0 +1,7 @@
+interface:
+  display_name: "Revnu: First customers"
+  short_description: "Find your first buyers and launch a growth experiment"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  brand_color: "#1C8F4C"
+  default_prompt: "Use $revnu-first-customers to plan how to get the first customers for this project."
