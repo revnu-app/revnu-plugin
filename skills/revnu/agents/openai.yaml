@@ -1,0 +1,7 @@
+interface:
+  display_name: "Revnu"
+  short_description: "Get customers for what you are building"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  brand_color: "#1C8F4C"
+  default_prompt: "Use $revnu to work out how to get customers for this project."

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Revnu: SEO and AI answers"
+  short_description: "Get found in Google, ChatGPT and other AI answers"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  brand_color: "#1C8F4C"
+  default_prompt: "Use $revnu-seo-ai-answers to plan how buyers can find this project."
