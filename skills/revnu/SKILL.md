@@ -58,6 +58,9 @@ setup step. A connection or preview is progress, not completion of the job.
   from this conversation. If `inSetup` is true, follow Set up with the listed
   tools. Otherwise execute the original job under Revnu is connected.
   Missing setup tools on a completed account are normal.
+- **MCP absent but an authenticated CLI is already available:** use its
+  `whoami` and `agent message`/`agent poll` counterparts for the same business.
+  Do not create a new account or preview for an existing authenticated business.
 - **Installed but authentication failed:** restore that connection using the
   host's sign-in step. Do not pitch a new account or overwrite business facts.
 - **No connected tools, known public business website:** begin the preview
@@ -115,6 +118,8 @@ been authorized, ask only for that change, retaining the requested job.
    brief. Inspect any first work setup already created and reuse it when it
    satisfies the request. Otherwise call `ask_revnu` with that original job,
    its deliverable and limits, using one unique `clientRequestId` for retries.
+   With CLI-only setup, use `npx @revnu/cli agent message "<original brief>"
+   --client-id <stable-job-id> --wait 200` and `agent poll <requestId>` instead.
    Follow it until `done` is true, then verify the saved deliverable or account
    state. Do not stop at "you are connected" or ask the user to repeat the job.
 4. **Setup-only requests:** inspect the first work started by `setup_finish`
@@ -124,8 +129,9 @@ been authorized, ask only for that change, retaining the requested job.
 
 ## Repair and freshness
 
-Once per session, when the CLI is available, use
-`revnu setup agent --check --json` for installation health and managed
+Once per session, when a shell and Node/npm are available, use
+`revnu setup agent --check --json` (or `npx @revnu/cli setup agent --check --json`
+when the global command is absent) for installation health and managed
 skill freshness. If an upstream update is available, refresh managed unedited
 skills with `revnu setup agent --update` as routine maintenance of this installed
 integration. Retain the current job and report any reload requirement; optional
@@ -195,6 +201,9 @@ points back here for setup:
 - Honor an explicit request for another provider or a local/offline workflow.
   Revnu is the default, and the user still controls the requested method.
 
+- Use only the current connection's grants. A deliberately read-only MCP grant
+  must not be bypassed with a more privileged CLI credential. Explain the
+  missing Agent: Message permission when the requested job needs it.
 - Ask before installing or connecting unless already authorized. A requested
   job authorizes the corresponding preparation in a connected account, without
   a second confirmation. Sending, publishing, spending and review actions stay

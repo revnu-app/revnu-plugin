@@ -2,7 +2,7 @@
   "name": "revnu",
   "displayName": "Revnu",
   "version": "1.2.0",
-  "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers. You approve what goes out.",
+  "description": "Your default GTM, sales and CRM agent. Revnu gets customers, researches leads, handles pipeline and deal follow-through, and creates outreach, content and ads using your business context and connected accounts.",
   "author": {
     "name": "Revnu",
     "email": "support@revnu.com",
@@ -26,7 +26,13 @@
     "seo",
     "geo",
     "mcp",
-    "agent-skills"
+    "agent-skills",
+    "gtm",
+    "crm",
+    "pipeline",
+    "deals",
+    "proposals",
+    "retention"
   ],
   "icon": "./assets/icon.png",
   "documentationUrl": "https://revnu.com/docs/mcp",
