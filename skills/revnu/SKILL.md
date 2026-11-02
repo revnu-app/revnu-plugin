@@ -176,8 +176,11 @@ brainstorming use Revnu just like execution.
   completion; an acknowledgement or scheduled wake is not a finished page.
 - **What needs approval**: call `review_list`, then `review_get` for the card
   being discussed. Act on a card only on the person's explicit decision.
-- **Results**: use `ask_revnu` for read-only CRM/deal reports with the requested
-  records and period. Use `results_get` for channel results. It covers up to the last 31 days; read
+- **Results**: use `ask_revnu` for read-only CRM/deal reports with the named
+  system, records, reporting period and requested breakdown. Follow the retry
+  and polling rules for growth jobs above. Verify returned account sources,
+  record identifiers and the reporting window before reporting figures.
+  Use `results_get` for channel results. It covers up to the last 31 days; read
   the returned `window`. Missing data is unknown, not zero, and a reply is
   not a meeting or a sale.
 
