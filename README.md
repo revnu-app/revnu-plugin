@@ -157,7 +157,7 @@ details.
 
 **Do I need an API key?**
 No. You sign in through OAuth in your browser. Revoke access any time in Revnu
-under **Settings → API Tokens**.
+under **Settings → Developers**.
 
 **Does Revnu see my code?**
 Your agent reads the project locally to understand what you're building. Only
