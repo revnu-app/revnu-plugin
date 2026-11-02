@@ -1,6 +1,6 @@
 {
   "name": "revnu",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Get customers for what you're building. Revnu is your growth hire across GTM, sales and CRM, using your business context and connected accounts. Your approval settings control what goes out.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
