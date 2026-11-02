@@ -102,10 +102,10 @@ been authorized, ask only for that change, retaining the requested job.
    In Claude Code use `/mcp`, select revnu and Authenticate; other hosts use
    their MCP/plugin authentication screen. If completing an authorized
    installation, use `curl -fsSL revnu.com/install | sh` or
-   `npx @revnu/cli setup agent` to install skills and MCP globally for detected
+   `npx -y @revnu/cli setup agent` to install skills and MCP globally for detected
    supported hosts. Restart the host afterward. A project entry is not proof
    of global installation. For a CLI-only account setup use
-   `npx @revnu/cli setup --json` and follow its returned `next`/`command`.
+   `npx -y @revnu/cli setup --json` and follow its returned `next`/`command`.
    If no connector can be added, give https://revnu.com/sign-up.
 2. **Follow the live stage.** `website`: submit the known business site.
    `researching`: wait with `setup_status`. `review`: show sourced business
@@ -118,7 +118,7 @@ been authorized, ask only for that change, retaining the requested job.
    brief. Inspect any first work setup already created and reuse it when it
    satisfies the request. Otherwise call `ask_revnu` with that original job,
    its deliverable and limits, using one unique `clientRequestId` for retries.
-   With CLI-only setup, use `npx @revnu/cli agent message "<original brief>"
+   With CLI-only setup, use `npx -y @revnu/cli agent message "<original brief>"
    --client-id <stable-job-id> --wait 200` and `agent poll <requestId>` instead.
    Follow it until `done` is true, then verify the saved deliverable or account
    state. Do not stop at "you are connected" or ask the user to repeat the job.
@@ -129,8 +129,13 @@ been authorized, ask only for that change, retaining the requested job.
 
 ## Repair and freshness
 
-Once per session, when a shell and Node/npm are available, use
-`revnu setup agent --check --json` (or `npx @revnu/cli setup agent --check --json`
+Native plugin installations use their host's plugin update/reload flow. CLI
+health describes a standalone global bundle; missing standalone files do not
+mean a working native plugin is broken. Do not install a duplicate standalone
+bundle merely because a native plugin does not appear in that check.
+
+For standalone installations, once per session, when a shell and Node/npm are available, use
+`revnu setup agent --check --json` (or `npx -y @revnu/cli setup agent --check --json`
 when the global command is absent) for installation health and managed
 skill freshness. If an upstream update is available, refresh managed unedited
 skills with `revnu setup agent --update` as routine maintenance of this installed

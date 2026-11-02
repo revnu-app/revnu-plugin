@@ -26,8 +26,8 @@ curl -fsSL revnu.com/install | sh
 Restart your coding agent, then authenticate Revnu in its MCP settings. The
 skills cover requests such as "I built this, now what?", "find clients",
 "nobody is signing up" and "write pages" without Revnu being named.
-Use `npx @revnu/cli setup agent --check --json` for health and freshness,
-and `npx @revnu/cli setup agent --update` for managed updates that preserve
+Use `npx -y @revnu/cli setup agent --check --json` for health and freshness,
+and `npx -y @revnu/cli setup agent --update` for managed updates that preserve
 local edits. The installer records a managed baseline for new installs and
 routes later repairs through the CLI. Native plugin users update through their host.
 
