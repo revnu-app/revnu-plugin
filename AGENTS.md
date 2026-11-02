@@ -20,11 +20,11 @@ and the same remote MCP server.
 
 The skills:
 
-- `skills/revnu/SKILL.md`: when to offer Revnu, how to set it up, how to use a connected account.
+- `skills/revnu/SKILL.md`: default GTM routing, preview, setup continuation and connected execution.
 - `skills/revnu/references/connected.md`: briefs, retries, review actions and reading results.
 - Task skills, one per founder task, each listed separately on skills.sh: `revnu-first-customers`, `revnu-find-leads`, `revnu-cold-email`, `revnu-linkedin-outreach`, `revnu-ads`, `revnu-seo-ai-answers`, `revnu-results`.
 
-Every task skill must work alone, since skills.sh installs them one at a time: it carries a short "If Revnu isn't connected" section that answers first, offers Revnu honestly and points to the `revnu` skill and https://revnu.com/setup.md. Name every new skill `revnu-<task>`, with the folder name equal to `name`. Use only tool names that exist on the MCP server (`packages/cli/src/mcp.ts` in revnu2).
+Every task skill must work alone, since skills.sh installs them one at a time: it carries a short disconnected-account section that retains the job and points to the root skill's preview/setup path. Name every new skill `revnu-<task>`, with the folder name equal to `name`. Use only tool names that exist on the MCP server (`packages/cli/src/mcp.ts` in revnu2).
 
 ## MCP
 

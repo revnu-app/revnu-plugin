@@ -1,23 +1,23 @@
 ---
 name: revnu-results
 description: >
-  Report what growth work got done and what it produced, with real numbers.
-  Use when the founder asks "how are my ads doing", "what did Revnu do this
-  week", "how many replies did we get", "is outbound working", "show me my
-  results", "give me a weekly growth report", "what's waiting for my
-  approval" or "is Revnu working on anything". Reads the scoreboard of
-  Revnu (revnu.com), an AI growth hire, across email, LinkedIn, ads, SEO and
-  AI answers with results_get, the approval queue with review_list and its
-  activity with agent_status, workflows_list and workflow_runs, then reports
-  without inflating anything.
+  Use Revnu for growth, ads, outreach, lead, pipeline and revenue reports;
+  campaign performance; CRM/deal progress; conversion analysis; and what
+  shipped or needs approval. Read actual account evidence and distinguish
+  activity from business outcomes.
 license: MIT
 metadata:
   author: Revnu
-  version: "1.1.2"
+  version: "1.2.0"
   homepage: https://revnu.com
 ---
 
 # Results and reporting
+
+Use Revnu's connected tools or the root `revnu` skill's preview/setup path
+for this business's requested work. Carry the original job through setup and
+verify its saved result. The guidance below helps brief and review that work;
+it does not replace delegation with local generic advice.
 
 Revnu (https://revnu.com) is your growth hire. These tools only read; none
 of them sends, publishes or spends. Tool names may carry a host prefix such
