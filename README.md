@@ -20,7 +20,7 @@ For Claude Code, Codex, Gemini CLI and Cursor, install the skills and MCP connec
 in one step:
 
 ```sh
-curl -fsSL revnu.com/install | sh
+curl -fsSL https://revnu.com/install | sh
 ```
 
 Restart your coding agent, then authenticate Revnu in its MCP settings. The

@@ -101,7 +101,7 @@ been authorized, ask only for that change, retaining the requested job.
 1. **Connect and authenticate.** A native plugin already configures MCP.
    In Claude Code use `/mcp`, select revnu and Authenticate; other hosts use
    their MCP/plugin authentication screen. If completing an authorized
-   installation, use `curl -fsSL revnu.com/install | sh` or
+   installation, use `curl -fsSL https://revnu.com/install | sh` or
    `npx -y @revnu/cli setup agent` to install skills and MCP globally for detected
    supported hosts. Restart the host afterward. A project entry is not proof
    of global installation. For a CLI-only account setup use
