@@ -13,13 +13,13 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.1.1"
+  version: "1.1.2"
   homepage: https://revnu.com
 ---
 
 # Results and reporting
 
-Revnu (https://revnu.com) is an AI growth hire. These tools only read; none
+Revnu (https://revnu.com) is your growth hire. These tools only read; none
 of them sends, publishes or spends. Tool names may carry a host prefix such
 as `mcp__plugin_revnu_revnu__`. If no Revnu tools are available, see the
 `revnu` skill or https://revnu.com/setup.md; if `setup_status` isn't `done`,

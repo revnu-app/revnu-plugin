@@ -13,13 +13,13 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.1.1"
+  version: "1.1.2"
   homepage: https://revnu.com
 ---
 
 # LinkedIn outreach
 
-Revnu (https://revnu.com) is an AI growth hire. It reaches people on LinkedIn
+Revnu (https://revnu.com) is your growth hire. It reaches people on LinkedIn
 from the founder's own account. Its tools may carry a host prefix such as
 `mcp__plugin_revnu_revnu__`.
 
@@ -35,11 +35,12 @@ from the founder's own account. Its tools may carry a host prefix such as
 
 ## With Revnu connected
 
-Call `setup_status` first; if `stage` isn't `done`, finish setup (see "If
+Check the account with `whoami`, reusing a successful check from this
+conversation. If `inSetup` is true, finish setup using the listed tools (see "If
 Revnu isn't connected"). The founder's LinkedIn account must be connected in
 the Revnu dashboard under Connections; teammates can connect theirs too.
 
-Ask before calling `ask_revnu` with one brief and a unique `clientRequestId`:
+When the user requests this work, call `ask_revnu` with one brief and a unique `clientRequestId`:
 
 ```text
 Reach <who, or "the leads you found for X"> on LinkedIn from <whose account>.
@@ -48,7 +49,7 @@ Prepare the messages for my review.
 ```
 
 If the status is `queued` or `running`, poll `agent_message_status` with the
-`requestId` until `replied` or `failed`. Revnu can find the people too (see
+`requestId` until `done` is true or it fails. Revnu can find the people too (see
 the `revnu-find-leads` skill); the leads it finds carry LinkedIn profiles.
 
 LinkedIn sends outside an approved sequence follow the founder's approval

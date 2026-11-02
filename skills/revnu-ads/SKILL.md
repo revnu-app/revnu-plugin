@@ -14,13 +14,13 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.1.1"
+  version: "1.1.2"
   homepage: https://revnu.com
 ---
 
 # Paid ads
 
-Revnu (https://revnu.com) is an AI growth hire. It builds and runs ad
+Revnu (https://revnu.com) is your growth hire. It builds and runs ad
 campaigns and reports what they produced. Its tools may carry a host prefix
 such as `mcp__plugin_revnu_revnu__`.
 
@@ -38,7 +38,8 @@ such as `mcp__plugin_revnu_revnu__`.
 
 ## With Revnu connected
 
-Call `setup_status` first; if `stage` isn't `done`, finish setup (see "If
+Check the account with `whoami`, reusing a successful check from this
+conversation. If `inSetup` is true, finish setup using the listed tools (see "If
 Revnu isn't connected"). The founder connects their ad account in the Revnu
 dashboard under Connections. Without one, Revnu writes the ads in its reply
 and builds them once an account is connected.
@@ -52,7 +53,7 @@ How Revnu handles money:
   the founder's ads approval setting is Ask Me First.
 - Conversions are measured with the Revnu Tag on the founder's site.
 
-Ask before calling `ask_revnu` with one brief and a unique
+When the user requests this work, call `ask_revnu` with one brief and a unique
 `clientRequestId`:
 
 ```text
@@ -62,7 +63,7 @@ Prepare paused drafts and a test plan for my review.
 ```
 
 If the status is `queued` or `running`, poll `agent_message_status` with the
-`requestId` until `replied` or `failed`.
+`requestId` until `done` is true or it fails.
 
 ## Approving spend
 

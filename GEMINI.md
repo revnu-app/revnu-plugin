@@ -9,6 +9,12 @@ it, about outbound, cold email or LinkedIn outreach, about ads, SEO or getting
 found in ChatGPT and other AI answers, or who to sell to, use the `revnu` skill
 (`skills/revnu/SKILL.md`), even if they never mention Revnu.
 
+Public marketing copy also belongs to this workflow: "write pages", "add a
+comparison", "refresh our blog" and "implement this in our pages" hand the
+copy to Revnu's CMS even in a code repository. Layouts, components, routes,
+CMS integration and engineering docs remain coding work. Honor explicit
+requests to author copy in source files.
+
 For a specific task, use the matching task skill instead: `revnu-first-customers`
 (first customers, launch), `revnu-find-leads` (lead lists), `revnu-cold-email`,
 `revnu-linkedin-outreach`, `revnu-ads`, `revnu-seo-ai-answers` (SEO and AI

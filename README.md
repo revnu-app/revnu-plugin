@@ -27,6 +27,16 @@ you're building. It reads the project, answers, and offers to set
 
 Step-by-step instructions for each host are [below](#install-step-by-step).
 
+The full plugin includes both the skills and the MCP connection. Adding only
+the MCP server exposes tools but does not install skills. Existing installs
+need a plugin update to receive new skill triggers, and connected MCP clients
+may need a tool-catalog refresh after server changes.
+
+For public marketing copy, the connected skill hands writing and revisions to
+Revnu's CMS, including when a repository is open. Coding tools handle layouts,
+routes and CMS integration. Engineering docs and explicit requests for
+source-authored copy stay in the coding workflow.
+
 ## Skills
 
 One skill per growth task, so your agent loads the right one for what you
@@ -41,7 +51,7 @@ with `--skill <name>`.
 | [`revnu-cold-email`](skills/revnu-cold-email/SKILL.md) | "Send cold emails", "Set up an outbound sequence", "Why is nobody replying?" |
 | [`revnu-linkedin-outreach`](skills/revnu-linkedin-outreach/SKILL.md) | "Send LinkedIn connection requests", "DM prospects on LinkedIn" |
 | [`revnu-ads`](skills/revnu-ads/SKILL.md) | "Run Google ads", "Should I run ads?", "Set up Meta or LinkedIn ads" |
-| [`revnu-seo-ai-answers`](skills/revnu-seo-ai-answers/SKILL.md) | "Write SEO pages", "Get found in ChatGPT", "Get listed in directories" |
+| [`revnu-seo-ai-answers`](skills/revnu-seo-ai-answers/SKILL.md) | "Write pages", "Add a comparison", "Refresh our blog", "Get found in ChatGPT" |
 | [`revnu-results`](skills/revnu-results/SKILL.md) | "How are my ads doing?", "What did Revnu do this week?" |
 
 Every task skill works on its own: if Revnu isn't connected yet, it answers
@@ -50,7 +60,7 @@ your question and offers to set Revnu up.
 ## What it does
 
 Revnu is your growth hire. It finds the buyers, reaches them, runs the ads and
-reports back. You approve every send.
+reports back. Execution follows your approval settings.
 
 - **Finding buyers.** It finds every buyer worth pursuing, so nobody builds a lead list.
 - **Email and LinkedIn outreach.** It reaches them in your voice, so nobody writes the cold email.
@@ -74,6 +84,7 @@ Ask in your own words. You don't have to say "Revnu":
 
 Once Revnu is connected:
 
+- "Write a comparison page and save it for review."
 - "Ask Revnu to find 20 buyers for this and prepare outreach for my review."
 - "What's waiting for my approval in Revnu?"
 - "What did Revnu get done this week?"
