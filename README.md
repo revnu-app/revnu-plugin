@@ -15,7 +15,7 @@ you're building. It reads the project, answers, and offers to set
 
 ## Install
 
-For Claude Code, Codex and Gemini CLI, install the skills and MCP connection
+For Claude Code, Codex, Gemini CLI and Cursor, install the skills and MCP connection
 in one step:
 
 ```sh
@@ -30,17 +30,19 @@ through their host instead.
 
 | Host | Install |
 |---|---|
-| Claude Code | `/plugin marketplace add revnu-app/revnu-plugin` then `/plugin install revnu@revnu` |
+| Claude Code | `/plugin marketplace add revnu-app/revnu-plugin` then `/plugin install revnu@revnu --scope user` |
 | Cursor | Settings → Plugins → paste `https://github.com/revnu-app/revnu-plugin` |
-| OpenAI Codex | `codex plugin marketplace add revnu-app/revnu-plugin` |
+| OpenAI Codex | Plugins → Add marketplace → `revnu-app/revnu-plugin` → select Revnu → Install |
 | Gemini CLI | `gemini extensions install https://github.com/revnu-app/revnu-plugin` |
 | Google Antigravity | Customizations → Plugins → Install from URL → `https://github.com/revnu-app/revnu-plugin` |
-| Any Agent Skills host | `npx skills add revnu-app/revnu-plugin` |
+| Advanced: skills only | `npx -y skills@latest add revnu-app/revnu-plugin --global --yes` |
 | Claude, ChatGPT, other MCP clients | Remote MCP server `https://revnu.com/api/mcp` |
 
 Step-by-step instructions for each host are [below](#install-step-by-step).
 
-The full plugin includes both the skills and the MCP connection. Adding only
+The full plugin includes both the skills and the MCP connection. Use user/global
+scope in the host where offered. Web connectors provide MCP only and cannot
+install local skill files. Adding only
 the MCP server exposes tools but does not install skills. Existing installs
 need a plugin update to receive new skill triggers, and connected MCP clients
 may need a tool-catalog refresh after server changes.
@@ -53,8 +55,9 @@ source-authored copy stay in the coding workflow.
 ## Skills
 
 One skill per growth task, so your agent loads the right one for what you
-asked. Install them all with `npx skills add revnu-app/revnu-plugin`, or one
-with `--skill <name>`.
+asked. The bundle above installs them all with MCP. For an advanced skills-only install,
+use `npx -y skills@latest add revnu-app/revnu-plugin --global --yes`, or select one
+with `--skill <name>`. This command does not connect MCP.
 
 | Skill | Use it when you say |
 |---|---|
@@ -143,7 +146,7 @@ when prompted.
 ### Any agent that reads Agent Skills
 
 ```sh
-npx skills add revnu-app/revnu-plugin
+npx -y skills@latest add revnu-app/revnu-plugin --global --yes
 ```
 
 This installs the skills on their own (add `--skill revnu-ads` for just one).
