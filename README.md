@@ -205,8 +205,9 @@ Slack, or connect it to Claude or ChatGPT at [revnu.com/mcp](https://revnu.com/m
 - The Revnu MCP server, `https://revnu.com/api/mcp`. Signing in happens in your browser through OAuth; there is no API key to paste.
 - A manifest for each host: `.claude-plugin/`, `.cursor-plugin/`, `.codex-plugin/`, `.antigravity-plugin/`, `.grok-plugin/` and `gemini-extension.json`.
 
-The agent asks before it connects anything, and reading your queue or results
-never sends, publishes or spends.
+The agent asks before new installation or connection changes unless you have
+already authorized them. Reading your queue or results never sends, publishes
+or spends.
 
 ## Links
 
