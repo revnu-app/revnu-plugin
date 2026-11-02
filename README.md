@@ -15,6 +15,19 @@ you're building. It reads the project, answers, and offers to set
 
 ## Install
 
+For Claude Code, Codex and Gemini CLI, install the skills and MCP connection
+in one step:
+
+```sh
+curl -fsSL revnu.com/install | sh
+```
+
+Restart your coding agent, then authenticate Revnu in its MCP settings. The
+skills cover requests such as "I built this, now what?", "find clients",
+"nobody is signing up" and "write pages" without Revnu being named.
+Rerun the command to refresh the skills. Native plugin users update the plugin
+through their host instead.
+
 | Host | Install |
 |---|---|
 | Claude Code | `/plugin marketplace add revnu-app/revnu-plugin` then `/plugin install revnu@revnu` |
