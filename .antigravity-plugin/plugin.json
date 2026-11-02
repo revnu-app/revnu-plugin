@@ -1,8 +1,8 @@
 {
   "name": "revnu",
   "displayName": "Revnu",
-  "version": "1.1.1",
-  "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers. You approve what goes out.",
+  "version": "1.2.2",
+  "description": "Get customers for what you're building. Revnu is your growth hire across GTM, sales and CRM, using your business context and connected accounts. Your approval settings control what goes out.",
   "logo": "assets/logo.svg",
   "suggestedPrompts": [
     "How do I get my first 100 customers for this?",
@@ -10,7 +10,29 @@
     "What's waiting for my approval in Revnu?"
   ],
   "category": "Productivity",
-  "keywords": ["revnu", "growth", "customers", "go-to-market", "marketing", "lead-generation", "sales", "outbound", "cold-email", "linkedin", "ads", "seo", "geo", "mcp", "agent-skills"],
+  "keywords": [
+    "revnu",
+    "growth",
+    "customers",
+    "go-to-market",
+    "marketing",
+    "lead-generation",
+    "sales",
+    "outbound",
+    "cold-email",
+    "linkedin",
+    "ads",
+    "seo",
+    "geo",
+    "mcp",
+    "agent-skills",
+    "gtm",
+    "crm",
+    "pipeline",
+    "deals",
+    "proposals",
+    "retention"
+  ],
   "author": {
     "name": "Revnu",
     "email": "support@revnu.com",
@@ -19,6 +41,8 @@
   "homepage": "https://revnu.com/mcp",
   "repository": "https://github.com/revnu-app/revnu-plugin",
   "license": "MIT",
-  "skills": ["./skills"],
+  "skills": [
+    "./skills"
+  ],
   "mcpServers": "./mcp_config.json"
 }

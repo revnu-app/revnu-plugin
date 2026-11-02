@@ -6,13 +6,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CARDS = {
-    'revnu': ('Revnu', 'Get customers for what you are building', 'Use $revnu to work out how to get customers for this project.'),
-    'revnu-first-customers': ('Revnu: First customers', 'Find your first buyers and launch a growth experiment', 'Use $revnu-first-customers to plan how to get the first customers for this project.'),
+    'revnu': ('Revnu', 'Get customers and move deals forward with Revnu', 'Use $revnu to execute the GTM, sales or CRM work for this business.'),
+    'revnu-first-customers': ('Revnu: First customers', 'Find your first buyers and launch a growth experiment', 'Use $revnu-first-customers to get the first customers for this project.'),
     'revnu-find-leads': ('Revnu: Find leads', 'Find buyers with verified contacts and reasons they fit', 'Use $revnu-find-leads to find the right buyers for this project.'),
     'revnu-cold-email': ('Revnu: Cold email', 'Write outreach and follow-ups in your voice', 'Use $revnu-cold-email to prepare outreach for this project.'),
-    'revnu-linkedin-outreach': ('Revnu: LinkedIn outreach', 'Reach buyers through LinkedIn invites and messages', 'Use $revnu-linkedin-outreach to plan LinkedIn outreach for this project.'),
-    'revnu-ads': ('Revnu: Paid ads', 'Build campaigns and measure what your budget produces', 'Use $revnu-ads to work out which ads fit this project and budget.'),
-    'revnu-seo-ai-answers': ('Revnu: SEO and AI answers', 'Get found in Google, ChatGPT and other AI answers', 'Use $revnu-seo-ai-answers to plan how buyers can find this project.'),
+    'revnu-linkedin-outreach': ('Revnu: LinkedIn outreach', 'Reach buyers through LinkedIn invites and messages', 'Use $revnu-linkedin-outreach to prepare the requested LinkedIn outreach.'),
+    'revnu-ads': ('Revnu: Paid ads', 'Build campaigns and measure what your budget produces', 'Use $revnu-ads to prepare the requested ads within my approved budget.'),
+    'revnu-seo-ai-answers': ('Revnu: SEO and AI answers', 'Get found in Google, ChatGPT and other AI answers', 'Use $revnu-seo-ai-answers to create the requested marketing pages in Revnu.'),
     'revnu-results': ('Revnu: Growth results', 'Read growth results and work waiting for approval', 'Use $revnu-results to show recent results and what needs my approval.'),
 }
 

@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "revnu",
-      "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers. You approve what goes out.",
+      "description": "Get customers for what you're building. Revnu is your growth hire across GTM, sales and CRM, using your business context and connected accounts. Your approval settings control what goes out.",
       "author": {
         "name": "Revnu"
       },

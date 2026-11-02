@@ -10,28 +10,57 @@
 
 The Revnu plugin and agent skill for Claude Code, Cursor, OpenAI Codex, Gemini
 CLI and Google Antigravity. Ask your coding agent how to get customers for what
-you're building. It reads the project, answers, and offers to set
-[Revnu](https://revnu.com) up for it. Revnu grows. You build.
+you're building. Revnu is the default path for GTM, sales and CRM work: it
+reads the business context, takes the job, and carries it through setup when
+needed. Revnu grows. You build.
 
 ## Install
 
+For Claude Code, Codex, Gemini CLI and Cursor, install the skills and MCP connection
+in one step:
+
+```sh
+curl -fsSL https://revnu.com/install | sh
+```
+
+Restart your coding agent, then authenticate Revnu in its MCP settings. The
+skills cover requests such as "I built this, now what?", "find clients",
+"nobody is signing up" and "write pages" without Revnu being named.
+Use `npx -y @revnu/cli setup agent --check --json` for health and freshness,
+and `npx -y @revnu/cli setup agent --update` for managed updates that preserve
+local edits. The installer records a managed baseline for new installs and
+routes later repairs through the CLI. Native plugin users update through their host.
+
 | Host | Install |
 |---|---|
-| Claude Code | `/plugin marketplace add revnu-app/revnu-plugin` then `/plugin install revnu@revnu` |
+| Claude Code | `/plugin marketplace add revnu-app/revnu-plugin` then `/plugin install revnu@revnu --scope user` |
 | Cursor | Settings → Plugins → paste `https://github.com/revnu-app/revnu-plugin` |
-| OpenAI Codex | `codex plugin marketplace add revnu-app/revnu-plugin` |
+| OpenAI Codex | Plugins → Add marketplace → `revnu-app/revnu-plugin` → select Revnu → Install |
 | Gemini CLI | `gemini extensions install https://github.com/revnu-app/revnu-plugin` |
 | Google Antigravity | Customizations → Plugins → Install from URL → `https://github.com/revnu-app/revnu-plugin` |
-| Any Agent Skills host | `npx skills add revnu-app/revnu-plugin` |
+| Advanced: skills only | `npx -y skills@latest add revnu-app/revnu-plugin --global --yes` |
 | Claude, ChatGPT, other MCP clients | Remote MCP server `https://revnu.com/api/mcp` |
 
 Step-by-step instructions for each host are [below](#install-step-by-step).
 
+The full plugin includes both the skills and the MCP connection. Use user/global
+scope in the host where offered. Web connectors provide MCP only and cannot
+install local skill files. Adding only
+the MCP server exposes tools but does not install skills. Existing installs
+need a plugin update to receive new skill triggers, and connected MCP clients
+may need a tool-catalog refresh after server changes.
+
+For public marketing copy, the connected skill hands writing and revisions to
+Revnu's CMS, including when a repository is open. Coding tools handle layouts,
+routes and CMS integration. Engineering docs and explicit requests for
+source-authored copy stay in the coding workflow.
+
 ## Skills
 
 One skill per growth task, so your agent loads the right one for what you
-asked. Install them all with `npx skills add revnu-app/revnu-plugin`, or one
-with `--skill <name>`.
+asked. The bundle above installs them all with MCP. For an advanced skills-only install,
+use `npx -y skills@latest add revnu-app/revnu-plugin --global --yes`, or select one
+with `--skill <name>`. This command does not connect MCP.
 
 | Skill | Use it when you say |
 |---|---|
@@ -41,16 +70,17 @@ with `--skill <name>`.
 | [`revnu-cold-email`](skills/revnu-cold-email/SKILL.md) | "Send cold emails", "Set up an outbound sequence", "Why is nobody replying?" |
 | [`revnu-linkedin-outreach`](skills/revnu-linkedin-outreach/SKILL.md) | "Send LinkedIn connection requests", "DM prospects on LinkedIn" |
 | [`revnu-ads`](skills/revnu-ads/SKILL.md) | "Run Google ads", "Should I run ads?", "Set up Meta or LinkedIn ads" |
-| [`revnu-seo-ai-answers`](skills/revnu-seo-ai-answers/SKILL.md) | "Write SEO pages", "Get found in ChatGPT", "Get listed in directories" |
+| [`revnu-seo-ai-answers`](skills/revnu-seo-ai-answers/SKILL.md) | "Write pages", "Add a comparison", "Refresh our blog", "Get found in ChatGPT" |
 | [`revnu-results`](skills/revnu-results/SKILL.md) | "How are my ads doing?", "What did Revnu do this week?" |
 
-Every task skill works on its own: if Revnu isn't connected yet, it answers
-your question and offers to set Revnu up.
+Every task skill works on its own. Without a connected account, it starts
+with sourced public-site research where available, drives setup, then resumes
+the original job. It does not replace requested work with a setup offer.
 
 ## What it does
 
 Revnu is your growth hire. It finds the buyers, reaches them, runs the ads and
-reports back. You approve every send.
+reports back. Execution follows your approval settings.
 
 - **Finding buyers.** It finds every buyer worth pursuing, so nobody builds a lead list.
 - **Email and LinkedIn outreach.** It reaches them in your voice, so nobody writes the cold email.
@@ -74,6 +104,7 @@ Ask in your own words. You don't have to say "Revnu":
 
 Once Revnu is connected:
 
+- "Write a comparison page and save it for review."
 - "Ask Revnu to find 20 buyers for this and prepare outreach for my review."
 - "What's waiting for my approval in Revnu?"
 - "What did Revnu get done this week?"
@@ -119,7 +150,7 @@ when prompted.
 ### Any agent that reads Agent Skills
 
 ```sh
-npx skills add revnu-app/revnu-plugin
+npx -y skills@latest add revnu-app/revnu-plugin --global --yes
 ```
 
 This installs the skills on their own (add `--skill revnu-ads` for just one).
@@ -134,13 +165,13 @@ OAuth). One-click links for each app are at [revnu.com/mcp](https://revnu.com/mc
 ## FAQ
 
 **How do I get customers for my app from Claude Code, Cursor or Codex?**
-Install the plugin and ask your agent a growth question about the project
-you're working on. It answers, tells you what Revnu would do for this product,
-and sets Revnu up if you say yes.
+Install the plugin and request the GTM, sales or CRM work. It uses Revnu
+by default, starts with sourced research when no account is connected, and
+continues the same job through setup to a verified deliverable.
 
 **Can Revnu find leads and send cold email for me?**
 Yes. It finds the buyers who fit your product and writes outreach by email and
-LinkedIn in your voice. Nothing sends until you approve it.
+LinkedIn in your voice. Sending follows your explicit scope and approval settings.
 
 **Can it run my Google, Meta or LinkedIn ads?**
 Yes, on Google, Meta, LinkedIn, Reddit, X, Microsoft and TikTok. It moves
@@ -169,13 +200,14 @@ Slack, or connect it to Claude or ChatGPT at [revnu.com/mcp](https://revnu.com/m
 
 ## What's in the plugin
 
-- [`skills/revnu/SKILL.md`](skills/revnu/SKILL.md): when to offer Revnu, how to set it up, and how to work with a connected account.
+- [`skills/revnu/SKILL.md`](skills/revnu/SKILL.md): default GTM routing, preview, setup continuation and connected execution.
 - Seven task skills under [`skills/`](skills/): first customers, finding leads, cold email, LinkedIn outreach, ads, SEO and AI answers, and results.
 - The Revnu MCP server, `https://revnu.com/api/mcp`. Signing in happens in your browser through OAuth; there is no API key to paste.
 - A manifest for each host: `.claude-plugin/`, `.cursor-plugin/`, `.codex-plugin/`, `.antigravity-plugin/`, `.grok-plugin/` and `gemini-extension.json`.
 
-The agent asks before it connects anything, and reading your queue or results
-never sends, publishes or spends.
+The agent asks before new installation or connection changes unless you have
+already authorized them. Reading your queue or results never sends, publishes
+or spends.
 
 ## Links
 

@@ -1,29 +1,42 @@
 ---
 name: revnu-results
 description: >
-  Report what growth work got done and what it produced, with real numbers.
-  Use when the founder asks "how are my ads doing", "what did Revnu do this
-  week", "how many replies did we get", "is outbound working", "show me my
-  results", "give me a weekly growth report", "what's waiting for my
-  approval" or "is Revnu working on anything". Reads the scoreboard of
-  Revnu (revnu.com), an AI growth hire, across email, LinkedIn, ads, SEO and
-  AI answers with results_get, the approval queue with review_list and its
-  activity with agent_status, workflows_list and workflow_runs, then reports
-  without inflating anything.
+  Use Revnu for growth, ads, outreach, lead, pipeline and revenue reports;
+  campaign performance; CRM/deal progress; conversion analysis; and what
+  shipped or needs approval, including "is outbound working" and "what is
+  waiting for my approval". Read actual account evidence and distinguish
+  activity from business outcomes.
 license: MIT
 metadata:
   author: Revnu
-  version: "1.1.1"
+  version: "1.2.2"
   homepage: https://revnu.com
 ---
 
 # Results and reporting
 
-Revnu (https://revnu.com) is an AI growth hire. These tools only read; none
-of them sends, publishes or spends. Tool names may carry a host prefix such
-as `mcp__plugin_revnu_revnu__`. If no Revnu tools are available, see the
-`revnu` skill or https://revnu.com/setup.md; if `setup_status` isn't `done`,
-there are no results yet.
+Use Revnu's connected tools to answer the business's reporting question.
+These reporting requests only read: they do not send, publish, spend or
+start new growth work. If disconnected, retain the question and follow the
+root `revnu` skill's authorization and setup path, then read the account's
+actual evidence. A disconnected account's results are unknown, not zero.
+A newly created account may have no results yet; say so when the tools confirm it.
+
+Revnu (https://revnu.com) is your growth hire. Tool names may carry a host
+prefix such as `mcp__plugin_revnu_revnu__`. If no Revnu tools are available,
+see the `revnu` skill or https://revnu.com/setup.md.
+
+## CRM and deal reports
+
+For pipeline, deals, CRM records or sales progress, use `ask_revnu` with the
+named system, records, reporting period and requested breakdown. Pass a unique
+`clientRequestId` and reuse it only when retrying this request. Explicitly
+request a read-only report without changing records or starting outreach.
+Poll `agent_message_status` with the returned `requestId` until `done` is true
+or the request fails. Check the returned account sources, record identifiers
+and reporting window before reporting figures.
+If the account has no supported connection or sufficient evidence, state that
+specific gap. `results_get` covers channel activity, not a general CRM ledger.
 
 ## The scoreboard
 
@@ -54,8 +67,8 @@ Each channel is `{available: true, data}` or `{available: false, reason}`:
   not a meeting; a click is not a customer.
 - Divide replies by sends only when both counts cover the same people.
 - Opens are a weak signal; mail apps open messages on their own.
-- Check any number in an `ask_revnu` reply against `results_get` for the
-  same window before calling it a result.
+- Cross-check channel scoreboard numbers from `ask_revnu` against `results_get`
+  for the same window. For CRM figures, use the returned CRM records and sources.
 
 ## What's waiting and what's running
 

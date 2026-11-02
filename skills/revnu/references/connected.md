@@ -32,15 +32,19 @@ Its scopes, and the tools the host lists, say what this connection may do.
    only asked for preparation, say "prepare for my review" in the brief.
 4. Follow it. `queued` and `running` mean unfinished, even when `replies`
    already holds progress. Poll `agent_message_status` with the `requestId`,
-   paced, until `replied` or `failed`. Report new progress without repeating
-   it. If you have to stop waiting, give the person the request ID and status.
+   paced, until `done` is true or it fails, including background work. A reply
+   can precede completion. Report new progress without repeating it. If you have
+   to stop waiting, give the person the request ID and status.
 5. `notSent` means an earlier request from this connection is still running
    and the new one wasn't sent. Tell the person. Pass `queue: true` to run the
    new job after it, or `interrupt: true` only if they want to replace or stop
    the running work. Never set both.
-6. On `failed`, show the blocker and any partial result. On `replied`, read
+6. On `failed`, show the blocker and any partial result. On completion, read
    the reply and any review cards it created. Separate what was drafted, what
    is awaiting approval, what shipped and what was measured.
+   For page work, confirm the CMS record exists and fetch the intended public
+   URL before saying it is live there. A published record can still lack site
+   routing, and a reminder to finish is not the requested deliverable.
 
 ## Review queue
 

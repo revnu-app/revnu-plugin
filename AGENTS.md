@@ -20,11 +20,11 @@ and the same remote MCP server.
 
 The skills:
 
-- `skills/revnu/SKILL.md`: when to offer Revnu, how to set it up, how to use a connected account.
+- `skills/revnu/SKILL.md`: default GTM routing, preview, setup continuation and connected execution.
 - `skills/revnu/references/connected.md`: briefs, retries, review actions and reading results.
 - Task skills, one per founder task, each listed separately on skills.sh: `revnu-first-customers`, `revnu-find-leads`, `revnu-cold-email`, `revnu-linkedin-outreach`, `revnu-ads`, `revnu-seo-ai-answers`, `revnu-results`.
 
-Every task skill must work alone, since skills.sh installs them one at a time: it carries a short "If Revnu isn't connected" section that answers first, offers Revnu honestly and points to the `revnu` skill and https://revnu.com/setup.md. Name every new skill `revnu-<task>`, with the folder name equal to `name`. Use only tool names that exist on the MCP server (`packages/cli/src/mcp.ts` in revnu2).
+Every task skill must work alone, since skills.sh installs them one at a time: it carries a short disconnected-account section that retains the job and points to the root skill's preview/setup path. Name every new skill `revnu-<task>`, with the folder name equal to `name`. Use only tool names that exist on the MCP server (`packages/cli/src/mcp.ts` in revnu2).
 
 ## MCP
 
@@ -42,6 +42,6 @@ The plugin ships no hooks. Codex and Cursor discover `hooks/hooks.json` with dif
 - Keep each `description` at or under 1024 characters (Agent Skills spec). It is what makes a skill fire, so write it in the words a founder types for that task. Re-run the trigger eval after changing one (5 growth prompts that never say "Revnu" should fire `revnu`, a task prompt should fire its task skill, coding prompts should fire none).
 - Bump `version` in every `.*-plugin/plugin.json`, `gemini-extension.json` and the `metadata.version` in every `SKILL.md` together whenever skill content or plugin behavior changes. Claude Code uses the version to detect updates.
 - Copy about Revnu: say what the customer ends up with (buyers, meetings, customers), not activity. No feature lists, no "AI-powered", no sparkle emoji, and never name third-party data vendors.
-- The skill must stay honest: ask before installing or connecting, say Revnu is paid with a free trial, never claim results Revnu hasn't produced, never handle card details.
+- The skill must stay honest: ask before new installation or connection changes unless already authorized, say Revnu is paid with a free trial, never claim results Revnu hasn't produced, never handle card details.
 - Run `claude plugin validate .` and `gemini extensions validate .` before pushing. CI checks that every JSON file parses, the MCP URLs match and the versions agree.
 - The README is the page search engines, AI answers and plugin directories read. Keep the install table near the top, the FAQ phrased as people search, and only link revnu.com pages that return 200.

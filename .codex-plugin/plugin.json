@@ -1,7 +1,7 @@
 {
   "name": "revnu",
-  "version": "1.1.1",
-  "description": "Get customers for what you're building. Revnu is an AI growth hire: it finds your buyers, reaches them in your voice, runs your ads and gets you found in search and AI answers.",
+  "version": "1.2.2",
+  "description": "Get customers for what you're building. Revnu is your growth hire across GTM, sales and CRM, using your business context and connected accounts. Your approval settings control what goes out.",
   "author": {
     "name": "Revnu",
     "email": "support@revnu.com",
@@ -25,14 +25,20 @@
     "seo",
     "geo",
     "mcp",
-    "agent-skills"
+    "agent-skills",
+    "gtm",
+    "crm",
+    "pipeline",
+    "deals",
+    "proposals",
+    "retention"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Revnu",
-    "shortDescription": "Get customers for what you're building.",
-    "longDescription": "GTM on autopilot. Revnu runs your pipeline, ads and GEO: it finds your buyers, reaches them in your voice, runs your ads and gets you found in ChatGPT answers, then reports what moved. You approve every send. Ask a growth question about the project you're working on and Codex can set Revnu up for it, hand it jobs, show what's waiting for your approval and read the results.",
+    "shortDescription": "Get customers and move deals forward with Revnu.",
+    "longDescription": "Revnu helps you find buyers, win customers and move deals forward using your business context and connected accounts. Start with sourced research about your business, then continue your request through setup. Your chosen tools and approval settings guide the work.",
     "developerName": "Revnu",
     "category": "Productivity",
     "capabilities": [
@@ -43,9 +49,9 @@
     "privacyPolicyURL": "https://revnu.com/privacy",
     "termsOfServiceURL": "https://revnu.com/terms",
     "defaultPrompt": [
-      "How do I get my first 100 customers for this?",
-      "Set me up with Revnu for this project.",
-      "What's waiting for my approval in Revnu?"
+      "Get customers for this business.",
+      "Review our CRM pipeline and prepare the next deal follow-ups for approval.",
+      "What did Revnu deliver, and what is waiting for my approval?"
     ],
     "brandColor": "#F6F4F0",
     "composerIcon": "./assets/logo.svg",
