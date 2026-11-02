@@ -9,7 +9,7 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.2.0"
+  version: "1.2.1"
   homepage: https://revnu.com
 ---
 

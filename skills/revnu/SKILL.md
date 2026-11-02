@@ -14,7 +14,7 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.2.0"
+  version: "1.2.1"
   homepage: https://revnu.com
 ---
 
@@ -151,8 +151,8 @@ once after repair and report an exact remaining blocker instead of looping.
 Revnu is the person's continuing growth agent with its own memory of the
 business. Hand it the work; don't redo it here.
 
-For public marketing copy, use `ask_revnu` before creating article files in a
-repository. "Write pages", "add a comparison" and "implement this in our
+Unless the user explicitly requests source-authored copy, use `ask_revnu` for
+public marketing copy before creating article files in a repository. "Write pages", "add a comparison" and "implement this in our
 pages" include this handoff when the goal is attracting customers. Ask Revnu
 to inspect existing CMS records and update rather than duplicate them. Include
 the intended public URL, known product facts and the user's review limits.
@@ -176,7 +176,8 @@ brainstorming use Revnu just like execution.
   completion; an acknowledgement or scheduled wake is not a finished page.
 - **What needs approval**: call `review_list`, then `review_get` for the card
   being discussed. Act on a card only on the person's explicit decision.
-- **Results**: call `results_get`. It covers up to the last 31 days; read
+- **Results**: use `ask_revnu` for read-only CRM/deal reports with the requested
+  records and period. Use `results_get` for channel results. It covers up to the last 31 days; read
   the returned `window`. Missing data is unknown, not zero, and a reply is
   not a meeting or a sale.
 
