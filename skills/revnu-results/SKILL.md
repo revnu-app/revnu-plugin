@@ -9,7 +9,7 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.2.1"
+  version: "1.2.2"
   homepage: https://revnu.com
 ---
 
@@ -29,7 +29,8 @@ see the `revnu` skill or https://revnu.com/setup.md.
 ## CRM and deal reports
 
 For pipeline, deals, CRM records or sales progress, use `ask_revnu` with the
-named system, records, reporting period and requested breakdown. Explicitly
+named system, records, reporting period and requested breakdown. Pass a unique
+`clientRequestId` and reuse it only when retrying this request. Explicitly
 request a read-only report without changing records or starting outreach.
 Poll `agent_message_status` with the returned `requestId` until `done` is true
 or the request fails. Check the returned account sources, record identifiers
