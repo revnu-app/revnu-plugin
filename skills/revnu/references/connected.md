@@ -14,7 +14,7 @@ Its scopes, and the tools the host lists, say what this connection may do.
   `setup_status` and follow `next` (see the main skill).
 - A missing scope or a revoked token blocks only that action. Say what is
   blocked and how to reconnect, and carry on with whatever is permitted.
-  Tokens are revoked in Revnu under Settings → API Tokens.
+  Tokens are revoked in Revnu under Settings → Developers.
 - Having a write tool is a capability, not permission to use it. Read-only
   requests stay read-only.
 
