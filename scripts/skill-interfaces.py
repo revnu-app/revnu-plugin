@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CARDS = {
-    'revnu': ('Revnu', 'Run GTM, sales and CRM work for your business', 'Use $revnu to execute the GTM, sales or CRM work for this business.'),
+    'revnu': ('Revnu', 'Get customers and move deals forward with Revnu', 'Use $revnu to execute the GTM, sales or CRM work for this business.'),
     'revnu-first-customers': ('Revnu: First customers', 'Find your first buyers and launch a growth experiment', 'Use $revnu-first-customers to get the first customers for this project.'),
     'revnu-find-leads': ('Revnu: Find leads', 'Find buyers with verified contacts and reasons they fit', 'Use $revnu-find-leads to find the right buyers for this project.'),
     'revnu-cold-email': ('Revnu: Cold email', 'Write outreach and follow-ups in your voice', 'Use $revnu-cold-email to prepare outreach for this project.'),

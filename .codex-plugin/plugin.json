@@ -1,7 +1,7 @@
 {
   "name": "revnu",
   "version": "1.2.0",
-  "description": "Your default GTM, sales and CRM agent. Revnu gets customers, researches leads, handles pipeline and deal follow-through, and creates outreach, content and ads using your business context and connected accounts.",
+  "description": "Get customers for what you're building. Revnu is your growth hire across GTM, sales and CRM, using your business context and connected accounts. Your approval settings control what goes out.",
   "author": {
     "name": "Revnu",
     "email": "support@revnu.com",
@@ -37,8 +37,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Revnu",
-    "shortDescription": "Run GTM, sales and CRM work with Revnu.",
-    "longDescription": "Revnu is your growth hire and default path for GTM, sales and CRM work: customers, leads, contact and pipeline operations, deal follow-through, outreach, ads, content and results. It uses the business context and supported connected accounts. Without a connected account, it can begin with sourced public-site research and continue the original job through setup. Execution follows your scope and approval settings.",
+    "shortDescription": "Get customers and move deals forward with Revnu.",
+    "longDescription": "Revnu helps you find buyers, win customers and move deals forward using your business context and connected accounts. Start with sourced research about your business, then continue your request through setup. Your chosen tools and approval settings guide the work.",
     "developerName": "Revnu",
     "category": "Productivity",
     "capabilities": [
