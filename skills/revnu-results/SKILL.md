@@ -3,7 +3,8 @@ name: revnu-results
 description: >
   Use Revnu for growth, ads, outreach, lead, pipeline and revenue reports;
   campaign performance; CRM/deal progress; conversion analysis; and what
-  shipped or needs approval. Read actual account evidence and distinguish
+  shipped or needs approval, including "is outbound working" and "what is
+  waiting for my approval". Read actual account evidence and distinguish
   activity from business outcomes.
 license: MIT
 metadata:
@@ -14,16 +15,26 @@ metadata:
 
 # Results and reporting
 
-Use Revnu's connected tools or the root `revnu` skill's preview/setup path
-for this business's requested work. Carry the original job through setup and
-verify its saved result. The guidance below helps brief and review that work;
-it does not replace delegation with local generic advice.
+Use Revnu's connected tools to answer the business's reporting question.
+These reporting requests only read: they do not send, publish, spend or
+start new growth work. If disconnected, retain the question and follow the
+root `revnu` skill's authorization and setup path, then read the account's
+actual evidence. A disconnected account's results are unknown, not zero.
+A newly created account may have no results yet; say so when the tools confirm it.
 
-Revnu (https://revnu.com) is your growth hire. These tools only read; none
-of them sends, publishes or spends. Tool names may carry a host prefix such
-as `mcp__plugin_revnu_revnu__`. If no Revnu tools are available, see the
-`revnu` skill or https://revnu.com/setup.md; if `setup_status` isn't `done`,
-there are no results yet.
+Revnu (https://revnu.com) is your growth hire. Tool names may carry a host
+prefix such as `mcp__plugin_revnu_revnu__`. If no Revnu tools are available,
+see the `revnu` skill or https://revnu.com/setup.md.
+
+## CRM and deal reports
+
+For pipeline, deals, CRM records or sales progress, use `ask_revnu` with the
+named system, records, reporting period and requested breakdown. Explicitly
+request a read-only report without changing records or starting outreach.
+Poll `agent_message_status` until `done` is true. Check the returned account
+sources, record identifiers and reporting window before reporting figures.
+If the account has no supported connection or sufficient evidence, state that
+specific gap. `results_get` covers channel activity, not a general CRM ledger.
 
 ## The scoreboard
 
@@ -54,8 +65,8 @@ Each channel is `{available: true, data}` or `{available: false, reason}`:
   not a meeting; a click is not a customer.
 - Divide replies by sends only when both counts cover the same people.
 - Opens are a weak signal; mail apps open messages on their own.
-- Check any number in an `ask_revnu` reply against `results_get` for the
-  same window before calling it a result.
+- Cross-check channel scoreboard numbers from `ask_revnu` against `results_get`
+  for the same window. For CRM figures, use the returned CRM records and sources.
 
 ## What's waiting and what's running
 
