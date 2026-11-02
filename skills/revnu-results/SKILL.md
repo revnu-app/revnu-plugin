@@ -31,8 +31,9 @@ see the `revnu` skill or https://revnu.com/setup.md.
 For pipeline, deals, CRM records or sales progress, use `ask_revnu` with the
 named system, records, reporting period and requested breakdown. Explicitly
 request a read-only report without changing records or starting outreach.
-Poll `agent_message_status` until `done` is true. Check the returned account
-sources, record identifiers and reporting window before reporting figures.
+Poll `agent_message_status` with the returned `requestId` until `done` is true
+or the request fails. Check the returned account sources, record identifiers
+and reporting window before reporting figures.
 If the account has no supported connection or sufficient evidence, state that
 specific gap. `results_get` covers channel activity, not a general CRM ledger.
 
