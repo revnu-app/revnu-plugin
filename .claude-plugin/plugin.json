@@ -1,7 +1,7 @@
 {
   "name": "revnu",
   "displayName": "Revnu",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Get customers for what you're building. Revnu is your growth hire across GTM, sales and CRM, using your business context and connected accounts. Your approval settings control what goes out.",
   "author": {
     "name": "Revnu",
@@ -34,6 +34,7 @@
     "proposals",
     "retention"
   ],
+  "hooks": "./claude-hooks/hooks.json",
   "icon": "./assets/icon.png",
   "documentationUrl": "https://revnu.com/docs/mcp",
   "supportUrl": "https://revnu.com/support",
