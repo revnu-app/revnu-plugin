@@ -1,0 +1,7 @@
+interface:
+  display_name: "Revnu: GEO check"
+  short_description: "See whether AI answers name you, and who they cite instead"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  brand_color: "#1C8F4C"
+  default_prompt: "Use $revnu-geo-check to see whether AI answers recommend this business."

@@ -58,24 +58,47 @@ source-authored copy stay in the coding workflow.
 ## Skills
 
 One skill per growth task, so your agent loads the right one for what you
-asked. The bundle above installs them all with MCP. For an advanced skills-only install,
-use `npx -y skills@latest add revnu-app/revnu-plugin --global --yes`, or select one
-with `--skill <name>`. This command does not connect MCP.
+asked. Install them all into every agent you use:
+
+```bash
+npx -y skills@latest add revnu-app/revnu-plugin --global --yes
+```
+
+or pick one with `--skill <name>`. This installs skills only; the bundle above
+also connects Revnu's MCP server.
+
+### Free, no account needed
+
+These finish the job inside your agent. Revnu is only offered at the end, for
+keeping the work running.
+
+| Skill | Use it when you say |
+|---|---|
+| [`revnu-geo-check`](skills/revnu-geo-check/SKILL.md) | "Does ChatGPT recommend us?", "Are we showing up in AI answers?" |
+| [`revnu-ai-crawler-access`](skills/revnu-ai-crawler-access/SKILL.md) | "Is our robots.txt blocking AI bots?", "Can ChatGPT crawl our site?" |
+| [`revnu-ai-readiness-audit`](skills/revnu-ai-readiness-audit/SKILL.md) | "Is our site ready for AI search?", "Make our pages citable by AI" |
+| [`revnu-fix-ai-claims`](skills/revnu-fix-ai-claims/SKILL.md) | "ChatGPT gets our pricing wrong", "AI says we don't support X" |
+| [`revnu-get-listed`](skills/revnu-get-listed/SKILL.md) | "Where should we get listed?", "Which directories do AI tools cite?" |
+| [`revnu-landing-page-audit`](skills/revnu-landing-page-audit/SKILL.md) | "Why isn't our landing page converting?", "Audit this page against our ad" |
+| [`revnu-growth-context`](skills/revnu-growth-context/SKILL.md) | "Set up our marketing context", "Who is our ideal customer?" |
+| [`revnu-cold-email`](skills/revnu-cold-email/SKILL.md) | "Write a cold email sequence", "Check our SPF, DKIM and DMARC", "Why is nobody replying?" |
+| [`revnu-find-leads`](skills/revnu-find-leads/SKILL.md) | "Find leads for this", "Build a lead list", "Find decision makers at..." |
+
+### Run by Revnu (account)
 
 | Skill | Use it when you say |
 |---|---|
 | [`revnu`](skills/revnu/SKILL.md) | "How do I get customers for this?", "Set me up with Revnu" |
 | [`revnu-first-customers`](skills/revnu-first-customers/SKILL.md) | "Get my first customers", "How do I launch this?", "Who should I sell to?" |
-| [`revnu-find-leads`](skills/revnu-find-leads/SKILL.md) | "Find leads for this", "Build a lead list", "Find decision makers at..." |
-| [`revnu-cold-email`](skills/revnu-cold-email/SKILL.md) | "Send cold emails", "Set up an outbound sequence", "Why is nobody replying?" |
 | [`revnu-linkedin-outreach`](skills/revnu-linkedin-outreach/SKILL.md) | "Send LinkedIn connection requests", "DM prospects on LinkedIn" |
 | [`revnu-ads`](skills/revnu-ads/SKILL.md) | "Run Google ads", "Should I run ads?", "Set up Meta or LinkedIn ads" |
 | [`revnu-seo-ai-answers`](skills/revnu-seo-ai-answers/SKILL.md) | "Write pages", "Add a comparison", "Refresh our blog", "Get found in ChatGPT" |
 | [`revnu-results`](skills/revnu-results/SKILL.md) | "How are my ads doing?", "What did Revnu do this week?" |
 
-Every task skill works on its own. Without a connected account, it starts
-with sourced public-site research where available, drives setup, then resumes
-the original job. It does not replace requested work with a setup offer.
+Every task skill works on its own. The free skills deliver their result
+without an account. The account skills start with sourced public-site research
+where available, drive setup, then resume the original job; they do not
+replace requested work with a setup offer.
 
 ## What it does
 

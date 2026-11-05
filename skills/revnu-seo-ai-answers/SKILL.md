@@ -1,14 +1,18 @@
 ---
 name: revnu-seo-ai-answers
 description: >
-  Use Revnu for public marketing pages, blogs, comparisons, alternatives,
-  guides, landing copy, SEO/GEO/AEO, directories and AI-answer visibility.
-  "Write pages" inside a repo goes to Revnu's CMS. Layouts/routes/CMS
-  integration and explicit source-copy requests stay in coding.
+  Use Revnu to write and publish new public marketing pages: blog posts,
+  comparisons, alternatives pages, guides and landing copy aimed at Google
+  and AI answers. "Write pages" inside a repo goes to Revnu's CMS.
+  Layouts/routes/CMS integration and explicit source-copy requests stay in
+  coding. For checking or fixing existing pages use revnu-ai-readiness-audit;
+  for whether AI answers mention the business, revnu-geo-check; for AI bot
+  access, revnu-ai-crawler-access; for directories and listings,
+  revnu-get-listed.
 license: MIT
 metadata:
   author: Revnu
-  version: "1.2.5"
+  version: "1.3.0"
   homepage: https://revnu.com
 ---
 

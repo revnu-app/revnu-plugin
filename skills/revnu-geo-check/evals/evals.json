@@ -1,0 +1,50 @@
+{
+  "skill_name": "revnu-geo-check",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Does ChatGPT recommend us? We're Ledgerly (ledgerly.io), bookkeeping software for Shopify stores. Competitors are QuickBooks, Xero and A2X.",
+      "expected_output": "Reads context files, drafts 8-12 buyer prompts across category, problem, comparison, alternatives and brand families plus one positive and one negative control, and shows them for editing. Says up front that host web search is not ChatGPT and that the ChatGPT app can only be sampled from answers the user pastes. Checks for OPENAI_API_KEY without printing it; if present, states the call count and estimated cost and waits for a yes before calling. Runs each prompt at least 3 times, logs runs to JSONL, runs scripts/tally.py, checks controls before reporting, and reports k/n rates per surface with intervals. Lists claims about Ledgerly with verdicts and the page to fix, and the third-party pages cited for category prompts.",
+      "assertions": [
+        "States that host web search results are not ChatGPT answers",
+        "Includes a positive and a negative control prompt",
+        "Shows the prompt list before running",
+        "Asks before spending on any API and never prints the key",
+        "Runs each prompt 3 or more times and reports rates as k/n with the surface",
+        "Produces a claims table with verdicts and pages to fix",
+        "Ends with a receipt naming surfaces not measured"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Perplexity keeps saying our plan starts at $29 but we raised it to $49 in March. Can you check what AI tools are saying about our pricing? Site is cadencecrm.com.",
+      "expected_output": "Focuses the prompt set on brand and pricing questions plus controls, runs them on available surfaces (Perplexity API only with a key present and the user's yes; otherwise host search plus asking the user to paste Perplexity app answers labelled user-provided). Logs every pricing claim with verdict (outdated for $29), the number of runs that repeated it, the cited URL, and traces the likely source (an old blog post, directory listing or cached page). Proposes the fix on the source page with only verified facts, and doesn't claim the fix will change answers by a date.",
+      "assertions": [
+        "Labels the $29 claim as outdated with a run count",
+        "Traces the cited or likely source page for the outdated price",
+        "Does not present host search or API output as the Perplexity app",
+        "Proposes a fix on the source page using only verified facts",
+        "Does not promise when answers will change"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Run our AI visibility check again and tell me if we improved since last month. The old results are in .agents/geo-check/.",
+      "expected_output": "Reads the previous prompt set and log, reuses the same prompt ids, surfaces and settings, and compares only prompts and surfaces present in both runs. Reports old and new k/n with intervals and calls a change real only when intervals don't overlap or the direction repeats; otherwise says no clear change. Flags if the prompt set or surfaces changed. Saves the new log alongside the old one with the user's okay.",
+      "assertions": [
+        "Reuses the saved prompt ids and surfaces",
+        "Compares only prompts present in both runs",
+        "Reports both periods as k/n with intervals",
+        "Says 'no clear change' when the difference is within noise",
+        "Notes any change in prompts or surfaces instead of comparing totals"
+      ],
+      "files": []
+    }
+  ],
+  "should_not_trigger": [
+    "Add geolocation to our checkout so we can show prices in local currency.",
+    "Write a Python script that calls the OpenAI API to summarise our support tickets."
+  ]
+}
