@@ -14,6 +14,13 @@ CARDS = {
     'revnu-ads': ('Revnu: Paid ads', 'Build campaigns and measure what your budget produces', 'Use $revnu-ads to prepare the requested ads within my approved budget.'),
     'revnu-seo-ai-answers': ('Revnu: SEO and AI answers', 'Get found in Google, ChatGPT and other AI answers', 'Use $revnu-seo-ai-answers to create the requested marketing pages in Revnu.'),
     'revnu-results': ('Revnu: Growth results', 'Read growth results and work waiting for approval', 'Use $revnu-results to show recent results and what needs my approval.'),
+    'revnu-geo-check': ('Revnu: GEO check', 'See whether AI answers name you, and who they cite instead', 'Use $revnu-geo-check to see whether AI answers recommend this business.'),
+    'revnu-ai-crawler-access': ('Revnu: AI crawler access', 'Check that ChatGPT, Claude and Perplexity can reach your site', 'Use $revnu-ai-crawler-access to check which AI crawlers can reach this site.'),
+    'revnu-ai-readiness-audit': ('Revnu: AI readiness audit', 'Make your pages easy for AI answers to quote', 'Use $revnu-ai-readiness-audit to audit this site for AI answers and fix it.'),
+    'revnu-fix-ai-claims': ('Revnu: Fix AI claims', 'Correct what AI answers get wrong about you', 'Use $revnu-fix-ai-claims to find and fix wrong claims AI answers make about us.'),
+    'revnu-get-listed': ('Revnu: Get listed', 'Get onto the lists and directories AI answers cite', 'Use $revnu-get-listed to find and draft the listings that get us recommended.'),
+    'revnu-landing-page-audit': ('Revnu: Landing page audit', 'Fix the page your ads and posts send people to', 'Use $revnu-landing-page-audit to audit this landing page against its traffic.'),
+    'revnu-growth-context': ('Revnu: Growth context', 'Write down who buys, why, and what has worked', 'Use $revnu-growth-context to create or update this business\'s growth context file.'),
 }
 
 

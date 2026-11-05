@@ -1,0 +1,50 @@
+{
+  "skill_name": "revnu-ai-crawler-access",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our site is acme-invoicing.com. We never show up when people ask ChatGPT or Perplexity for invoicing tools. Is something blocking the AI bots? Our dev added a robots.txt last month.",
+      "expected_output": "Reads any growth/product-marketing context file, then runs scripts/check_ai_crawlers.py on the homepage plus pricing and one content page. Reports every crawler grouped by job (search, training, user-triggered), with robots.txt verdict, status code and page directives each. Names OAI-SearchBot (not GPTBot) as the crawler behind ChatGPT search and PerplexityBot for Perplexity. If a crawler is blocked, quotes the exact rule and line. Separates robots.txt blocks from firewall/CDN blocks. Says access is necessary but doesn't guarantee citations. Ends with Not a problem, Could not check, and a receipt.",
+      "assertions": [
+        "Runs check_ai_crawlers.py (or equivalent manual checks) on more than one URL",
+        "Identifies OAI-SearchBot as the ChatGPT search crawler and GPTBot as training",
+        "Quotes the matching robots.txt rule and line for any block",
+        "Distinguishes robots.txt blocks from server/CDN blocks",
+        "Does not promise that fixing access will produce citations",
+        "Includes Not a problem, Could not check and a receipt"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I want to stop AI companies training on our blog but I still want to be cited in AI search. What should our robots.txt say? It's a Next.js app.",
+      "expected_output": "Explains that training and search are separate controls: block GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, Meta-ExternalAgent and CCBot, and optionally the shared __usage_ai-training token, while leaving OAI-SearchBot, Claude-SearchBot, PerplexityBot, Googlebot and Bingbot allowed. Notes that Google-Extended does not affect Google Search or AI Overviews and that Bing has no robots token for Copilot alone. Finds app/robots.ts or public/robots.txt, keeps existing private-path disallows (copying them into any new named group), shows a diff before editing, and re-runs the checker after deploy. Does not deploy.",
+      "assertions": [
+        "Keeps OAI-SearchBot, Claude-SearchBot and PerplexityBot allowed",
+        "Blocks GPTBot and ClaudeBot as training-only crawlers",
+        "States Google-Extended does not affect Google Search inclusion",
+        "Preserves existing private-path Disallow rules",
+        "Shows the diff before changing app/robots.ts or public/robots.txt",
+        "Does not deploy or push"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Cloudflare dashboard says we're blocking AI bots. Our robots.txt allows everything though. Can you check https://shopwidgets.io and tell me what ChatGPT and Claude actually get?",
+      "expected_output": "Runs the checker, compares each crawler's response with a browser baseline, and reports 403/429/challenge responses as server/CDN blocks even though robots.txt allows. Explains that requests came from this machine's IP, so Cloudflare's IP verification can treat real crawlers differently, and asks for or suggests checking Cloudflare logs for real crawler hits. Points to AI Crawl Control as the setting to change, recommends allowing search crawlers by user agent plus published IP ranges, and does not change Cloudflare settings itself. Notes user-triggered fetchers may ignore robots.txt.",
+      "assertions": [
+        "Compares crawler fetches against a browser user agent baseline",
+        "Labels the block as CDN/firewall, not robots.txt",
+        "States the limit of testing from a non-crawler IP",
+        "Names the specific Cloudflare setting rather than changing it",
+        "Recommends matching user agent plus vendor IP ranges for allow rules"
+      ],
+      "files": []
+    }
+  ],
+  "should_not_trigger": [
+    "Write a Python web scraper that respects robots.txt for my price tracker.",
+    "Our Next.js build fails with 'Module not found: app/robots.ts'. Fix the import."
+  ]
+}
