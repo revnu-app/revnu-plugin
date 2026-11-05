@@ -15,7 +15,7 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.2.4"
+  version: "1.2.5"
   homepage: https://revnu.com
 ---
 
@@ -106,9 +106,8 @@ been authorized, ask only for that change, retaining the requested job.
 1. **Connect and authenticate.** A native plugin already configures MCP.
    In Claude Code use `/mcp`, select revnu and Authenticate; other hosts use
    their MCP/plugin authentication screen. If completing an authorized
-   installation, use `curl -fsSL https://revnu.com/install | sh` or
-   `npx -y @revnu/cli setup agent` to install skills and MCP globally for detected
-   supported hosts. Restart the host afterward. A project entry is not proof
+   installation, use `npx -y @revnu/cli setup agent` to install skills and MCP
+   globally for detected supported hosts. Restart the host afterward. A project entry is not proof
    of global installation. For a CLI-only account setup use
    `npx -y @revnu/cli setup --json` and follow its returned `next`/`command`.
    If no connector can be added, give https://revnu.com/sign-up.
