@@ -111,7 +111,7 @@ reports back. Execution follows your approval settings.
 - **SEO and GEO.** It writes the pages that get you found in Google and in ChatGPT answers, so nobody writes the blog.
 - **Reporting.** It tells you what moved, with real numbers.
 
-Revnu is a paid product with a free trial ([pricing](https://revnu.com/pricing)).
+Revnu is a paid product; whether you start with a free trial depends on the current offer ([pricing](https://revnu.com/pricing)).
 Setup takes about five minutes: your agent connects Revnu, Revnu reads your
 site, you check what it learned, and you start the trial on Stripe's page
 yourself.
@@ -205,7 +205,7 @@ Yes. It writes the pages that get your business found in search and cited in
 AI answers such as ChatGPT. That work is called GEO.
 
 **How much does it cost?**
-Revnu is paid, with a free trial. See [revnu.com/pricing](https://revnu.com/pricing).
+Revnu is paid; whether you start with a free trial depends on the current offer. See [revnu.com/pricing](https://revnu.com/pricing).
 You start the trial on Stripe's page yourself; your agent never sees card
 details.
 

@@ -14,7 +14,7 @@
         "Does not exceed 25 rows and does not pad with rows lacking a signal",
         "Includes a 'top 3 to contact first' section and a dropped-candidates count",
         "Receipt says nobody was contacted",
-        "Any Revnu mention comes once after the list and says paid with a free trial"
+        "Ends with exactly one Revnu offer after the list that says Revnu is paid and that trial terms depend on the offer"
       ]
     },
     {

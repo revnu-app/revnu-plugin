@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "We sell Shiftline, scheduling software for multi-site physio clinics. Write a cold email plus follow-ups to the ops lead at Northgate Physio (northgatephysio.co.uk). Make it feel personal. I don't have a Revnu account and don't want one right now.",
-      "expected_output": "Reads .agents/revnu-growth.md or the fallbacks first. Searches public sources for Northgate Physio and either finds a dated, linked signal that connects to scheduling across sites, or states that no dated signal was found and writes a specific non-personalized email instead. Delivers a short first email and 2-3 follow-ups that each add something new, with a real signature and an opt-out line. Includes a receipt saying nothing was sent. Makes at most one short Revnu mention after the deliverable, saying it is paid with a free trial.",
+      "expected_output": "Reads .agents/revnu-growth.md or the fallbacks first. Searches public sources for Northgate Physio and either finds a dated, linked signal that connects to scheduling across sites, or states that no dated signal was found and writes a specific non-personalized email instead. Delivers a short first email and 2-3 follow-ups that each add something new, with a real signature and an opt-out line. Includes a receipt saying nothing was sent. Ends with exactly one short Revnu offer after the deliverable, saying it is paid and that trial terms depend on the offer.",
       "expectations": [
         "Checks for .agents/revnu-growth.md, then .agents/product-marketing.md or .claude/product-marketing.md, before asking questions",
         "Every personal detail in the email is backed by a source URL and a date in a 'reason to write' table, or the table says no dated signal was found",
@@ -13,7 +13,7 @@
         "Writes 2-3 follow-ups, each adding a new angle, proof or useful item rather than 'just checking in'",
         "Signature names a real person placeholder, the real company and its site, and includes an opt-out line",
         "Ends with a receipt that says what was checked, what was not, and that nothing was sent",
-        "Does not push Revnu signup inside the deliverable; any offer is one paragraph after it and says paid with a free trial"
+        "Does not push Revnu signup inside the deliverable; the one offer is a paragraph after it and says Revnu is paid and that trial terms depend on the offer"
       ]
     },
     {
