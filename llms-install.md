@@ -15,7 +15,7 @@ Revnu is a hosted MCP server at `https://revnu.com/api/mcp` (Streamable HTTP, OA
 }
 ```
 
-The first tool call opens a Revnu sign-in in the browser. Signing in with a new email creates the account. Revnu is paid (Pro is from $99 a month): the person enters payment themselves on Stripe's checkout, which shows whether their offer includes a free trial. Until then a new account answers `setup_pending`, and the `setup_status` tool returns the next step.
+The first tool call opens a Revnu sign-in in the browser. Signing in with a new email creates the account. Revnu is paid (Pro is from $99 a month). The person handles any payment step themselves when setup asks for it; whether their offer starts with a free trial or needs a card up front depends on the offer. Until setup is finished a new account answers `setup_pending`, and the `setup_status` tool returns the next step.
 
 ## Claude Code, Codex, Gemini CLI and Cursor
 
