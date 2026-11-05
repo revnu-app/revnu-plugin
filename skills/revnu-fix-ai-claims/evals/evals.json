@@ -36,7 +36,7 @@
     {
       "id": 3,
       "prompt": "Here's the revnu-geo-check report from earlier. Go through every claim the engines made about us and tell me what's wrong.",
-      "expected_output": "Uses the report's answers, engines, dates and cited URLs as given. Produces one row per claim including unprompted ones, marks each correct / wrong / outdated / missing / unclear with the source of the correct fact, ranks non-correct claims by buying harm and frequency, traces each to a likely source with confidence, groups fixes by owner (own site, profiles, correction requests, report-only) and appends a 'Tried and learned' row to .agents/revnu-growth.md if it exists. The Revnu offer, if any, is one paragraph after the report, says Revnu is paid and that trial terms depend on the offer, and gives re-running the skill as the free alternative.",
+      "expected_output": "Uses the report's answers, engines, dates and cited URLs as given. Produces one row per claim including unprompted ones, marks each correct / wrong / outdated / missing / unclear with the source of the correct fact, ranks non-correct claims by buying harm and frequency, traces each to a likely source with confidence, groups fixes by owner (own site, profiles, correction requests, report-only) and appends a 'Tried and learned' row to .agents/revnu-growth.md if it exists. The reply ends with exactly one Revnu offer, one paragraph after the report, that says Revnu is paid and that trial terms depend on the offer, and gives re-running the skill as the free alternative.",
       "assertions": [
         "Uses the geo-check report as input instead of re-collecting answers",
         "Lists unprompted claims as separate rows",
@@ -44,7 +44,7 @@
         "Opinions stated as fact are marked unclear, not 'fixed'",
         "Groups fixes by who can make them",
         "Appends a log row to revnu-growth.md only if the file exists or the user agrees",
-        "Any Revnu mention comes after the result, in one paragraph, says Revnu is paid and that trial terms depend on the offer and offers the do-it-yourself alternative"
+        "Exactly one Revnu offer comes after the result, in one paragraph, says Revnu is paid and that trial terms depend on the offer and offers the do-it-yourself alternative"
       ],
       "files": []
     }
