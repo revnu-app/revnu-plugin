@@ -81,19 +81,19 @@ keeping the work running.
 | [`revnu-get-listed`](skills/revnu-get-listed/SKILL.md) | "Where should we get listed?", "Which directories do AI tools cite?" |
 | [`revnu-landing-page-audit`](skills/revnu-landing-page-audit/SKILL.md) | "Why isn't our landing page converting?", "Audit this page against our ad" |
 | [`revnu-growth-context`](skills/revnu-growth-context/SKILL.md) | "Set up our marketing context", "Who is our ideal customer?" |
-| [`revnu-cold-email`](skills/revnu-cold-email/SKILL.md) | "Write a cold email sequence", "Check our SPF, DKIM and DMARC", "Why is nobody replying?" |
-| [`revnu-find-leads`](skills/revnu-find-leads/SKILL.md) | "Find leads for this", "Build a lead list", "Find decision makers at..." |
+| [`cold-email`](skills/cold-email/SKILL.md) | "Write a cold email sequence", "Check our SPF, DKIM and DMARC", "Why is nobody replying?" |
+| [`find-leads`](skills/find-leads/SKILL.md) | "Find leads for this", "Build a lead list", "Find decision makers at..." |
 
 ### Run by Revnu (account)
 
 | Skill | Use it when you say |
 |---|---|
 | [`revnu`](skills/revnu/SKILL.md) | "How do I get customers for this?", "Set me up with Revnu" |
-| [`revnu-first-customers`](skills/revnu-first-customers/SKILL.md) | "Get my first customers", "How do I launch this?", "Who should I sell to?" |
-| [`revnu-linkedin-outreach`](skills/revnu-linkedin-outreach/SKILL.md) | "Send LinkedIn connection requests", "DM prospects on LinkedIn" |
-| [`revnu-ads`](skills/revnu-ads/SKILL.md) | "Run Google ads", "Should I run ads?", "Set up Meta or LinkedIn ads" |
-| [`revnu-seo-ai-answers`](skills/revnu-seo-ai-answers/SKILL.md) | "Write pages", "Add a comparison", "Refresh our blog", "Get found in ChatGPT" |
-| [`revnu-results`](skills/revnu-results/SKILL.md) | "How are my ads doing?", "What did Revnu do this week?" |
+| [`first-customers`](skills/first-customers/SKILL.md) | "Get my first customers", "How do I launch this?", "Who should I sell to?" |
+| [`linkedin-outreach`](skills/linkedin-outreach/SKILL.md) | "Send LinkedIn connection requests", "DM prospects on LinkedIn" |
+| [`ads`](skills/ads/SKILL.md) | "Run Google ads", "Should I run ads?", "Set up Meta or LinkedIn ads" |
+| [`seo-ai-answers`](skills/seo-ai-answers/SKILL.md) | "Write pages", "Add a comparison", "Refresh our blog", "Get found in ChatGPT" |
+| [`results`](skills/results/SKILL.md) | "How are my ads doing?", "What did Revnu do this week?" |
 
 Every task skill works on its own. The free skills deliver their result
 without an account. The account skills start with sourced public-site research
@@ -176,7 +176,7 @@ when prompted.
 npx -y skills@latest add revnu-app/revnu-plugin --global --yes
 ```
 
-This installs the skills on their own (add `--skill revnu-ads` for just one).
+This installs the skills on their own (add `--skill ads` for just one).
 The agent connects Revnu's MCP server when you ask it to set Revnu up,
 following [revnu.com/setup.md](https://revnu.com/setup.md).
 
