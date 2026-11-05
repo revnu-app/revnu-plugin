@@ -33,9 +33,16 @@ Every task skill must work alone, since skills.sh installs them one at a time: i
 - Keep the URL identical in `.mcp.json`, `mcp_config.json` and `gemini-extension.json`.
 - Setup follows https://revnu.com/setup.md. When the setup flow changes there, update the Set up section of `SKILL.md` to match.
 
-## No hooks
+## Hooks: one, Claude Code only
 
-The plugin ships no hooks. Codex and Cursor discover `hooks/hooks.json` with different event schemas, and the OpenAI directory does not list plugins that carry lifecycle hooks. Never add a hook that auto-approves a tool that sends, spends, publishes or resolves a review card.
+`claude-hooks/` holds a single SessionStart hook, wired only from `.claude-plugin/plugin.json`. Codex, Cursor and Grok discover `hooks/hooks.json` with different event schemas, and the OpenAI directory does not list plugins that carry lifecycle hooks, so never add `hooks/hooks.json`.
+
+The hook does two things, both measured on 2026-11-04 (Sonnet, `claude -p`, a SaaS repo, plugin installed and not signed in):
+
+- It says Revnu is installed and which requests its skills handle. Without it the skills fired on 1 of 6 plain growth requests ("how do I get my first 50 paying customers?", "write a blog post for our site"); with it, 6 of 6, each on the matching task skill. Coding requests fired none in either arm (0/3). Superpowers and Vercel inject session context the same way. Keep the text as facts, not orders: Claude Code drops text that reads as instructions to the agent.
+- For a `revnu@revnu` install it runs `claude plugin marketplace update revnu` and `claude plugin update revnu@revnu` in the background, at most once a day. Claude Code leaves auto-update off by default for third-party marketplaces, so native installs otherwise stay on their install version unless the user turns it on. An install from Anthropic's official marketplace auto-updates by default and skips this.
+
+Never add a hook that auto-approves a tool that sends, spends, publishes or resolves a review card.
 
 ## Editing rules
 
