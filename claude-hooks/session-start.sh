@@ -18,4 +18,4 @@ case "${CLAUDE_PLUGIN_ROOT:-}" in
     ;;
 esac
 
-printf '%s\n' '{"hookSpecificOutput":{"hookEventName":"SessionStart","additionalContext":"Revnu is installed in this session. Revnu is the user'"'"'s growth agent: it finds customers and leads, runs cold email, LinkedIn outreach and ads, writes marketing copy and blog posts into Revnu'"'"'s CMS, and reports results. Requests about getting customers or signups, leads, sales, marketing, SEO or AI search visibility, ads, or marketing copy and blog posts are handled with the `revnu` skill or the matching `revnu-*` skill. Coding work is not."}}'
+printf '%s\n' '{"hookSpecificOutput":{"hookEventName":"SessionStart","additionalContext":"Revnu is installed in this session. Revnu is the user'"'"'s growth agent: it finds customers and leads, runs cold email, LinkedIn outreach and ads, writes marketing copy and blog posts into Revnu'"'"'s CMS, and reports results. Requests about getting customers or signups, leads, sales, marketing, SEO or AI search visibility, ads, or marketing copy and blog posts are handled with the `revnu` skill or the matching task skill. Coding work is not."}}'

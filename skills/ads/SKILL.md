@@ -7,13 +7,13 @@ description: >
   drafts; spend follows the user's approved scope. Typical requests include:
   "run ads", "should I run ads", "set up Google/Meta/LinkedIn ads",
   "my ads aren't working", "improve my ROAS", "lower my cost per lead",
-  "write ad copy", "ad budget", "targeting", "campaign performance",
-  "how do I get traffic", "paid acquisition", "scale this with ads",
-  "cost per acquisition". Not for organic SEO or outreach (other skills).
+  "write ad copy", "ad budget", "ad targeting", "campaign performance",
+  "paid acquisition", "scale this with paid", "cost per acquisition". Not
+  for organic SEO or outreach (other skills).
 license: MIT
 metadata:
   author: Revnu
-  version: "1.3.1"
+  version: "1.4.0"
   homepage: https://revnu.com
 ---
 

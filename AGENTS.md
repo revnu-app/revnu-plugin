@@ -25,7 +25,7 @@ The skills:
 - Task skills, one per founder task, each listed separately on skills.sh: `first-customers`, `find-leads`, `cold-email`, `linkedin-outreach`, `ads`, `seo-ai-answers`, `results`.
 - Free skills that finish their job without a Revnu account and offer Revnu once, after the result, for keeping it running: `revnu-geo-check`, `revnu-ai-crawler-access`, `revnu-ai-readiness-audit`, `revnu-fix-ai-claims`, `revnu-get-listed`, `revnu-landing-page-audit`, `revnu-growth-context`. `cold-email` and `find-leads` also have a full no-account path. Each carries `references/sources.md` (primary sources, dated) and `evals/evals.json`. Write them only from public sources: never copy Revnu's private agent skills or another publisher's text.
 
-Every task skill must work alone, since skills.sh installs them one at a time: it carries a short disconnected-account section that retains the job and points to the root skill's preview/setup path. Name every new skill `revnu-<task>`, with the folder name equal to `name`. Use only tool names that exist on the MCP server (`packages/cli/src/mcp.ts` in revnu2).
+Every task skill must work alone, since skills.sh installs them one at a time: it carries a short disconnected-account section that retains the job and points to the root skill's preview/setup path. Name every new task skill after the job alone (for example `cold-email`), with the folder name equal to `name`; only the root skill is `revnu`. Use only tool names that exist on the MCP server (`packages/cli/src/mcp.ts` in revnu2).
 
 ## MCP
 

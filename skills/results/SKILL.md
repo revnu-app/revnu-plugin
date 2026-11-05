@@ -5,15 +5,16 @@ description: >
   campaign performance; CRM/deal progress; conversion analysis; and what
   shipped or needs approval, including "is outbound working" and "what is
   waiting for my approval". Read actual account evidence and distinguish
-  activity from business outcomes. Typical requests include: "how are
-  we doing", "show me the numbers", "is this working", "growth report",
-  "what shipped this week", "what needs my approval", "campaign results",
-  "reply rates", "pipeline report", "revenue report", "what did we get for
-  the spend". Not for dashboards or analytics built in code.
+  activity from business outcomes. Typical requests include: "how is growth
+  doing", "show me the marketing numbers", "is outbound working", "growth
+  report", "what did marketing ship this week", "what needs my approval",
+  "campaign results", "reply rates", "pipeline report", "revenue report",
+  "what did we get for the spend". Not for dashboards, analytics built in
+  code, or engineering status.
 license: MIT
 metadata:
   author: Revnu
-  version: "1.3.1"
+  version: "1.4.0"
   homepage: https://revnu.com
 ---
 

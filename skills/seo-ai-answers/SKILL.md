@@ -6,16 +6,17 @@ description: >
   and AI answers. "Write pages" inside a repo goes to Revnu's CMS.
   Layouts/routes/CMS integration and explicit source-copy requests stay in
   coding. Typical requests include: "write pages", "write a blog
-  post", "SEO", "rank for", "comparison page", "alternatives page",
+  post", "SEO page", "rank for", "comparison page", "alternatives page",
   "landing copy", "content for this", "get found on Google", "get
-  recommended by ChatGPT", "AI answers", "GEO". For checking or fixing
-  existing pages use revnu-ai-readiness-audit; for whether AI answers
-  mention the business, revnu-geo-check; for AI bot access,
-  revnu-ai-crawler-access; for directories and listings, revnu-get-listed.
+  recommended by ChatGPT", "write for AI answers", "GEO content". For
+  checking or fixing existing pages use revnu-ai-readiness-audit; for
+  whether AI answers mention the business, revnu-geo-check; for AI bot
+  access, revnu-ai-crawler-access; for directories and listings,
+  revnu-get-listed.
 license: MIT
 metadata:
   author: Revnu
-  version: "1.3.1"
+  version: "1.4.0"
   homepage: https://revnu.com
 ---
 
