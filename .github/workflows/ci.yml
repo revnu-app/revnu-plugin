@@ -28,6 +28,7 @@ jobs:
           urls=$(
             {
               jq -r '.mcpServers[].url' .mcp.json
+              jq -r '.mcpServers[].url' mcp.json
               jq -r '.mcpServers[].serverUrl' mcp_config.json
               jq -r '.mcpServers[].httpUrl' gemini-extension.json
             } | sort -u
@@ -39,7 +40,7 @@ jobs:
           set -euo pipefail
           versions=$(
             {
-              jq -r '.version' .*-plugin/plugin.json gemini-extension.json
+              jq -r '.version' plugin.json .*-plugin/plugin.json gemini-extension.json
               sed -n 's/^  version: "\(.*\)"$/\1/p' skills/*/SKILL.md
             } | sort -u
           )
