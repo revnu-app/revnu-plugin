@@ -5,7 +5,7 @@
 **GTM on autopilot. Revnu runs your pipeline, ads and GEO.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![skills.sh](https://img.shields.io/badge/skills.sh-revnu-black)](https://www.skills.sh/revnu-app/revnu-plugin/revnu)
+[![skills.sh](https://www.skills.sh/b/revnu-app/revnu-plugin)](https://www.skills.sh/revnu-app/revnu-plugin)
 [![MCP server](https://img.shields.io/badge/MCP-revnu.com%2Fapi%2Fmcp-orange)](https://revnu.com/docs/mcp)
 
 The Revnu plugin and agent skill for Claude Code, Cursor, OpenAI Codex, Gemini
