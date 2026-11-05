@@ -15,7 +15,7 @@ Revnu is a hosted MCP server at `https://revnu.com/api/mcp` (Streamable HTTP, OA
 }
 ```
 
-The first tool call opens a Revnu sign-in in the browser. Signing in with a new email creates the account. A new account answers `setup_pending` until setup is finished; the `setup_status` tool returns the next step.
+The first tool call opens a Revnu sign-in in the browser. Signing in with a new email creates the account. Revnu is paid (Pro is from $99 a month): the person enters payment themselves on Stripe's checkout, which shows whether their offer includes a free trial. Until then a new account answers `setup_pending`, and the `setup_status` tool returns the next step.
 
 ## Claude Code, Codex, Gemini CLI and Cursor
 
@@ -23,4 +23,4 @@ The first tool call opens a Revnu sign-in in the browser. Signing in with a new 
 
 ## Without an account
 
-`POST https://revnu.com/api/v1/preview` with `{"website": "<url>"}` researches a business and returns a `previewId`. `GET https://revnu.com/api/v1/preview/<previewId>` returns what Revnu found, with sources and a `claim_url` that signs up and keeps the research. It needs no sign-in.
+`POST https://revnu.com/api/v1/preview` with `{"website": "<url>"}` starts researching the business and returns a `previewId` and a `poll` URL. Research runs in the background: `GET` the poll URL until `preview.status` is no longer `researching`. A `ready` preview has what Revnu found, with sources, and a `claim_url` that signs up and keeps the research. It needs no sign-in.
