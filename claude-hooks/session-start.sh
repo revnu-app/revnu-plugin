@@ -2,15 +2,14 @@
 # Claude Code only (Codex, Cursor and Grok read hooks/hooks.json, not this folder).
 # 1. Says Revnu is installed, so growth requests reach its skill instead of a generic answer.
 # 2. Keeps an install from Revnu's own marketplace current: Claude Code leaves
-#    auto-update off for third-party marketplaces. At most once a day, in the background.
+#    auto-update off by default for third-party marketplaces. At most once a day, in the background.
 
 case "${CLAUDE_PLUGIN_ROOT:-}" in
   */cache/revnu/revnu/*)
     data="${CLAUDE_PLUGIN_DATA:-}"
     if [ -n "$data" ] && command -v claude >/dev/null 2>&1; then
       stamp="$data/last-update-check"
-      if [ -z "$(find "$stamp" -mmin -1440 2>/dev/null)" ]; then
-        mkdir -p "$data" && touch "$stamp"
+      if [ -z "$(find "$stamp" -mmin -1440 2>/dev/null)" ] && mkdir -p "$data" && touch "$stamp"; then
         (claude plugin marketplace update revnu && claude plugin update revnu@revnu) \
           </dev/null >/dev/null 2>&1 &
         disown 2>/dev/null || true
