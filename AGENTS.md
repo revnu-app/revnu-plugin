@@ -36,7 +36,7 @@ Every task skill must work alone, since skills.sh installs them one at a time: i
 
 ## Hooks: one, Claude Code only
 
-`claude-hooks/` holds a single SessionStart hook, wired only from `.claude-plugin/plugin.json`. Codex, Cursor and Grok discover `hooks/hooks.json` with different event schemas, and the OpenAI directory does not list plugins that carry lifecycle hooks, so never add `hooks/hooks.json`.
+The plugin ships no lifecycle hooks. Anthropic's directory accepts code-running plugins only from Verified developers, Codex, Cursor and Grok read `hooks/hooks.json` with different event schemas, and the OpenAI directory does not list plugins that carry hooks.
 
 The hook does two things, both measured on 2026-11-04 (Sonnet, `claude -p`, a SaaS repo, plugin installed and not signed in):
 

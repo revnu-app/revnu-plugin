@@ -5,8 +5,8 @@ and model names change often: **before the first call, open the doc link
 and confirm the endpoint, a current model name and the pricing.** If the
 shape differs, follow the doc, not this file.
 
-Never print, echo, log or paste a key. Pass it from the environment in the
-header only. Check presence with `[ -n "$VAR" ] && echo set || echo missing`.
+Never print, echo, log or paste a key. In the samples, `YOUR_API_KEY` stands
+for the key from the environment; pass it in the header only. Check presence with `[ -n "$VAR" ] && echo set || echo missing`.
 
 ## 1. Host web search (no key, no cost beyond the host)
 
@@ -34,7 +34,7 @@ per-call tool fee on top of model tokens). Key: `OPENAI_API_KEY`.
 
 ```bash
 curl -s https://api.openai.com/v1/responses \
-  -H "Authorization: Bearer $OPENAI_API_KEY" -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" -H "Content-Type: application/json" \
   -d '{"model": "<current model from the doc>",
        "tools": [{"type": "web_search", "user_location": {"type": "approximate", "country": "US"}}],
        "tool_choice": "required",
@@ -63,7 +63,7 @@ https://docs.perplexity.ai/docs/getting-started/pricing.md. Key:
 
 ```bash
 curl -s https://api.perplexity.ai/v1/agent \
-  -H "Authorization: Bearer $PERPLEXITY_API_KEY" -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" -H "Content-Type: application/json" \
   -d '{"model": "perplexity/sonar", "input": "<prompt text>", "max_output_tokens": 800}'
 ```
 
@@ -85,7 +85,7 @@ ai.google.dev/gemini-api/docs/google-search). Key: `GEMINI_API_KEY`.
 
 ```bash
 curl -s https://generativelanguage.googleapis.com/v1beta/interactions \
-  -H "x-goog-api-key: $GEMINI_API_KEY" -H "Content-Type: application/json" \
+  -H "x-goog-api-key: YOUR_API_KEY" -H "Content-Type: application/json" \
   -H "Api-Revision: 2026-05-20" \
   -d '{"model": "<current model from the doc>", "input": "<prompt text>",
        "tools": [{"type": "google_search"}]}'
