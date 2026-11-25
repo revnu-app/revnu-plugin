@@ -18,7 +18,7 @@ description: >
 license: MIT
 metadata:
   author: Revnu
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: https://revnu.com
 ---
 
@@ -83,7 +83,8 @@ exists (see step 7), read it so this run can be compared with it.
      in the environment: OpenAI (`OPENAI_API_KEY`, Responses API
      `web_search` tool), Perplexity (`PERPLEXITY_API_KEY`, the Sonar model),
      Gemini (`GEMINI_API_KEY`, Grounding with Google Search). Check presence
-     with `[ -n "$OPENAI_API_KEY" ] && echo set`; never print, log or ask for
+     with `[ -n "$VAR" ] && echo set`, putting that provider's variable name
+     in place of `VAR`; never print, log or ask for
      a key.
    - **Answers the user pastes** from ChatGPT, Perplexity, Gemini, Copilot or
      Google's AI Overviews. Label them "user-provided"; they are the only way
