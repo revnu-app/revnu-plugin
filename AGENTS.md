@@ -34,14 +34,11 @@ Every task skill must work alone, since skills.sh installs them one at a time: i
 - Keep the URL identical in `.mcp.json`, `mcp_config.json` and `gemini-extension.json`.
 - Setup follows https://revnu.com/setup.md. When the setup flow changes there, update the Set up section of `SKILL.md` to match.
 
-## Hooks: one, Claude Code only
+## Hooks: none
 
-The plugin ships no lifecycle hooks. Anthropic's directory accepts code-running plugins only from Verified developers, Codex, Cursor and Grok read `hooks/hooks.json` with different event schemas, and the OpenAI directory does not list plugins that carry hooks.
+The plugin ships no lifecycle hooks. Anthropic's directory accepts code-running plugins only from Verified developers (the 2026-11-25 review made us remove ours), Codex, Cursor and Grok read `hooks/hooks.json` with different event schemas, and the OpenAI directory does not list plugins that carry hooks.
 
-The hook does two things, both measured on 2026-11-04 (Sonnet, `claude -p`, a SaaS repo, plugin installed and not signed in):
-
-- It says Revnu is installed and which requests its skills handle. Without it the skills fired on 1 of 6 plain growth requests ("how do I get my first 50 paying customers?", "write a blog post for our site"); with it, 6 of 6, each on the matching task skill. Coding requests fired none in either arm (0/3). Superpowers and Vercel inject session context the same way. Keep the text as facts, not orders: Claude Code drops text that reads as instructions to the agent.
-- For a `revnu@revnu` install it runs `claude plugin marketplace update revnu` and `claude plugin update revnu@revnu` in the background, at most once a day. Claude Code leaves auto-update off by default for third-party marketplaces, so native installs otherwise stay on their install version unless the user turns it on. An install from Anthropic's official marketplace auto-updates by default and skips this.
+What the removed SessionStart hook bought, in case we become a Verified developer and want it back: measured on 2026-11-04 (Sonnet, `claude -p`, a SaaS repo, plugin installed and not signed in), a session-start note saying Revnu is installed made the skills fire on 6 of 6 plain growth requests instead of 1 of 6, with 0 of 3 coding requests in either arm. It also ran a once-a-day `claude plugin update revnu@revnu` for native installs, which otherwise stay on their install version.
 
 Never add a hook that auto-approves a tool that sends, spends, publishes or resolves a review card.
 
